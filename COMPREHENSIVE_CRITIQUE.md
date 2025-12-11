@@ -636,8 +636,6 @@ Silent failures mean issues don't get added but no one knows.
   with:
     project-url: ${{ secrets.ORG_PROJECT_URL }}
     github-token: ${{ secrets.ORG_PROJECT_TOKEN }}
-  continue-on-error: false
-
 - name: Notify on failure
   if: failure()
   run: |
