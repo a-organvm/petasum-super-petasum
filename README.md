@@ -285,10 +285,6 @@ When an organization-wide issue affects specific repositories:
 - **Traceability**: Track impact across repositories
 - **Context**: Provide repository-specific context
 - **Notifications**: Keep stakeholders informed
-- **Metrics**: Measure organization-wide impact
-
----
-
 ## 🛠️ Configuration for Repository Maintainers
 
 ### Adding the Redirect Template to Your Repository
