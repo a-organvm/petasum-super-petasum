@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Propose an idea (Discussions)
-    url: https://github.com/your-org/org-issues/discussions/new?category=ideas
-    about: Start with a discussion for early proposals.
-  - name: Security vulnerability
-    url: https://github.com/your-org/.github/blob/main/SECURITY.md
-    about: Please follow our security policy.
-  - name: Support/help
-    url: https://github.com/your-org/org-issues/discussions/new?category=support
-    about: Use Discussions for Q&A and help.
+  - name: 💬 Organization Discussion
+    url: https://github.com/orgs/ivviiviivvi/discussions
+    about: For general organization-wide discussions and questions
+  - name: 📚 Documentation
+    url: https://github.com/ivviiviivvi/petasum-super-petasum/blob/main/README.md
+    about: Check the documentation for guidance on filing issues
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/ivviiviivvi/petasum-super-petasum/blob/main/SECURITY.md
+    about: Please follow our security policy for vulnerability reports
