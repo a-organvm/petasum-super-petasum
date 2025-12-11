@@ -1,422 +1,162 @@
-# Principle Conflicts: Resolution Framework
+# Principle Conflicts Documentation
 
-This document provides a practical framework for resolving conflicts between the principles outlined in [COMMANDMENTS.md](COMMANDMENTS.md). In complex organizational settings, principles sometimes pull in opposite directions. This framework helps navigate those tensions.
+## Prime Directive: Logic Above All
 
----
+**Logic is the supreme meta-principle that governs all other principles, decisions, and conflict resolutions within this organization.**
 
-## Philosophy: Principles are Tools, Not Rules
+All principles, practices, and decisions must be:
+1. **Logically consistent** - Free from internal contradictions
+2. **Logically sound** - Based on valid reasoning from true premises
+3. **Logically verifiable** - Subject to rational scrutiny and validation
 
-Principles should guide judgment, not replace it. When principles conflict, the goal is not to find "the right answer" but to make a **well-reasoned decision** that:
-1. Considers context
-2. Acknowledges trade-offs
-3. Documents rationale
-4. Can be adjusted if consequences prove problematic
+When any principle conflicts with logical consistency, **logic prevails without exception**.
 
----
+## Principle Hierarchy (Logic-First Framework)
+
+### Level 0: Meta-Principle (Absolute)
+**Logic & Logical Consistency**
+- Supersedes all other principles
+- Non-negotiable foundation
+- Source of authority for all lower-level principles
+
+### Level 1: Derived Foundational Principles
+Principles that are direct logical necessities:
+1. **Internal Consistency** - Contradictions are logically impermissible
+2. **Rational Justification** - All claims must have logical support
+3. **Verifiability** - Truth claims must be testable through reason
+4. **Transparency** - Hidden logic is unverifiable logic
+
+### Level 2: Operational Principles
+Principles derived from logical analysis of effective systems:
+1. **Determinism & Reliability** - Logical systems are predictable
+2. **Safety & Security** - Logical consequence of risk analysis
+3. **Performance Efficiency** - Logical optimization of resources
+4. **Quality Over Quantity** - Logical prioritization of value
+
+### Level 3: Community Principles
+Principles derived from logical analysis of sustainable collaboration:
+1. **Clarity & Precision** - Logical communication requirement
+2. **Beginner-Friendliness** - Logical expansion of participant pool
+3. **Inclusivity** - Logical maximization of diverse perspectives
+4. **Open Source & Freedom** - Logical enablement of verification
+
+### Level 4: Stability Principles
+Principles derived from logical analysis of sustainable evolution:
+1. **Backward Compatibility** - Logical respect for existing dependencies
+2. **Interoperability** - Logical enabling of integration
+3. **Privacy Standards** - Logical consequence of autonomy rights
 
 ## Conflict Resolution Matrix
 
-### Security/Privacy vs. Transparency/Openness
+| Conflict Type | Logical Resolution Approach | Outcome Criterion |
+|---------------|----------------------------|-------------------|
+| **Principle vs Logic** | Logic prevails absolutely | Logical consistency restored |
+| **Principle vs Principle (Same Level)** | Analyze which better serves logical goals | Most logically coherent path |
+| **Principle vs Principle (Different Levels)** | Higher level principle prevails | Hierarchy preserved |
+| **Interpretation Dispute** | Return to logical first principles | Clearest logical derivation |
+| **Pragmatic vs Ideal** | Logical analysis of actual constraints | Optimally logical within reality |
+| **Short-term vs Long-term** | Logical projection of consequences | Maximum long-term logical value |
+| **Individual vs Collective** | Logical analysis of system effects | Systemically sustainable logic |
 
-| Dimension | Security/Privacy Favored | Balanced Approach | Transparency Favored |
-|-----------|---------------------------|-------------------|----------------------|
-| **When** | Active security incidents, unpatched vulnerabilities, personal data, legal compliance | General org-wide initiatives, technical RFCs, post-incident reviews | Process improvements, architectural decisions, retrospectives |
-| **Implementation** | Private repo only, restricted access, sanitized summaries | Private during investigation, public after remediation | Public by default, private only when justified |
-| **Responsible Party** | Security team + Legal | Engineering leadership | Project maintainer |
-| **Example** | Security vulnerability tracking | Incident post-mortems | API versioning RFC |
+## Logic-Based Decision Framework
 
-**Resolution Hierarchy**: Security and Privacy are **zero-compromise** when:
-- Legal/regulatory requirements mandate it
-- Active threat or vulnerability exists
-- Personal or confidential data involved
+When facing any decision or conflict:
 
-Otherwise, **default to transparency** with privacy safeguards.
-
----
-
-### Performance/Speed vs. Quality/Thoroughness
-
-| Dimension | Performance Favored | Balanced Approach | Quality Favored |
-|-----------|---------------------|-------------------|-----------------|
-| **When** | SEV-1 incidents, time-critical decisions, high-frequency processes | Standard org-wide initiatives, RFCs with clear scope | Architectural decisions, security reviews, compliance changes |
-| **Implementation** | Minimal required fields, async updates, lightweight process | Core required fields + optional detail | Comprehensive documentation, thorough review |
-| **Responsible Party** | On-call/incident commander | Project owner | Tech lead + architect |
-| **Example** | Incident started template (2 fields) | Initiative template (8 fields) | Security audit checklist (30 items) |
-
-**Resolution Test**: "Is the value of additional detail worth 2x the time cost?"
-
-If yes → quality. If no → performance.
-
----
-
-### Flexibility/Customization vs. Determinism/Consistency
-
-| Dimension | Flexibility Favored | Balanced Approach | Determinism Favored |
-|-----------|---------------------|-------------------|---------------------|
-| **When** | Highly specialized teams, experimental projects, edge cases | Standard org-wide work with some team variance | Cross-team coordination, automation dependencies, compliance |
-| **Implementation** | Custom templates, optional fields, team-specific workflows | Standardized core + optional extensions | Strict required fields, enforced validation |
-| **Responsible Party** | Individual teams | Engineering leadership | Platform/tools team |
-| **Example** | Hardware team custom fields | Initiative template with optional sections | Automated project assignment |
-
-**Resolution Framework**:
-- **Standardize interfaces** (how systems talk to each other)
-- **Customize implementations** (how teams do their work)
-
----
-
-### Beginner-Friendly vs. Power-User Efficiency
-
-| Dimension | Beginner-Friendly Favored | Balanced Approach | Power-User Favored |
-|-----------|---------------------------|-------------------|--------------------|
-| **When** | Onboarding docs, rare operations, broad audience | Daily-use templates, common tasks | Advanced features, automation, experienced users |
-| **Implementation** | Verbose labels, inline help text, examples | Clear labels, linked help docs | Terse labels, keyboard shortcuts, CLI |
-| **Responsible Party** | Documentation team | Product/UX | Power users + advocates |
-| **Example** | "Org-wide Initiative (cross-repo project)" | "Org-wide Initiative" | CLI: `gh issue create --template=init` |
-
-**Resolution Principle**: **Progressive disclosure**
-- Beginner-friendly by default
-- Power-user features available but not required
-- Documentation serves both audiences
-
----
-
-## 7-Level Priority Hierarchy
-
-This hierarchy helps resolve principle conflicts when multiple principles apply:
-
-### Level 1: Legal & Regulatory Compliance 🔴
-**Why Highest**: Non-negotiable external requirements.
-**Trumps**: All other principles.
-**Examples**: GDPR, SOC2, HIPAA, export controls.
-**Decision Maker**: Legal + Compliance team.
-
-### Level 2: Security & Privacy 🔴
-**Why High**: Protects users and organization from harm.
-**Trumps**: Transparency, flexibility, performance, convenience.
-**Examples**: Vulnerability disclosure, data protection, authentication.
-**Decision Maker**: Security team (can be overridden only by Level 1).
-
-### Level 3: Operational Integrity 🟠
-**Why High**: Keeps systems running, prevents incidents.
-**Trumps**: Feature velocity, customization, documentation completeness.
-**Examples**: Incident response, disaster recovery, monitoring.
-**Decision Maker**: Oncall + SRE team.
-
-### Level 4: Quality & Correctness 🟡
-**Why Mid-High**: Wrong is worse than slow or incomplete.
-**Trumps**: Performance, quantity of features, time to market.
-**Examples**: Data integrity, correctness of financial calculations, architectural soundness.
-**Decision Maker**: Tech lead + architect.
-
-### Level 5: User Experience & Accessibility 🟢
-**Why Mid**: Inclusivity and usability matter for adoption.
-**Trumps**: Developer convenience, aesthetic preferences.
-**Examples**: Screen reader support, clear documentation, intuitive workflows.
-**Decision Maker**: UX lead + accessibility champion.
-
-### Level 6: Developer Productivity & Performance 🔵
-**Why Mid-Low**: Enables teams to move quickly.
-**Trumps**: Documentation completeness, process thoroughness.
-**Examples**: Fast CI/CD, minimal required fields, keyboard shortcuts.
-**Decision Maker**: Engineering manager + developer advocate.
-
-### Level 7: Aesthetic & Stylistic Preferences 🟣
-**Why Lowest**: Subjective, low-impact.
-**Trumps**: Nothing.
-**Examples**: Label colors, emoji usage, documentation tone.
-**Decision Maker**: Project maintainer (open to bikeshedding).
-
----
+1. **Identify the Core Logical Question**: What is the fundamental logical issue?
+2. **Eliminate Logical Fallacies**: Remove emotional, traditional, or unfounded arguments
+3. **Establish Logical Premises**: What are the verifiable facts and valid assumptions?
+4. **Apply Logical Reasoning**: Use valid inference rules (modus ponens, modus tollens, etc.)
+5. **Verify Logical Consistency**: Ensure conclusions don't contradict established truths
+6. **Test Logical Completeness**: Have all relevant logical factors been considered?
+7. **Document Logical Chain**: Make reasoning transparent and verifiable
 
 ## Precedent Case Studies
 
-These real (or realistic) scenarios establish precedent for future decisions:
+### Case Study 1: Security vs Ease of Use
+**Conflict**: Beginner-friendly principle (Level 3) vs Security principle (Level 2)
 
-### Case Study 1: "The Public Incident Debate"
+**Logical Analysis**:
+- Security failures create logical impossibilities (compromised systems cannot reliably execute)
+- Beginner-friendliness serves to expand participation, not compromise foundations
+- Therefore: Security must not be sacrificed for convenience
 
-**Scenario**: Engineering team wants to document major outage in public org-issues repo (transparency). Security team says private only (security). Customer success team wants public for customer trust (transparency).
+**Resolution**: Security (Level 2) prevails. Make security beginner-friendly through education and tooling, not through reduced security.
 
-**Conflicting Principles**:
-- Commandment #2: Privacy & Security First
-- Commandment #10: Transparency
+**Logical Outcome**: Both principles satisfied at appropriate hierarchy levels.
 
-**Resolution**:
-1. **Immediate response** (0-4 hours): Private incident issue for mitigation (Security wins)
-2. **Active investigation** (4-48 hours): Private repo, sanitized status page updates (Security wins with transparency mitigation)
-3. **Post-incident** (48+ hours): Public sanitized post-mortem (Transparency wins after security concerns addressed)
+### Case Study 2: Performance vs Feature Completeness
+**Conflict**: Performance principle (Level 2) vs Feature requests (varying levels)
 
-**Precedent Established**:
-- Security concerns are time-boxed, not permanent
-- Transparency can be delayed, not denied
-- Public post-mortems are standard after remediation
-- Customer-facing impacts get status page updates even if issue is private
+**Logical Analysis**:
+- A slow system reduces to unusability at scale (logical limit)
+- Features that compromise core performance create logical contradictions
+- Therefore: Performance sets boundaries; features must work within them
 
-**Decision Maker**: Security team during incident, Engineering leadership for post-mortem.
+**Resolution**: Assess each feature's logical necessity. Implement only features that maintain performance within acceptable logical bounds.
 
----
+**Logical Outcome**: Quality over quantity principle reinforced through logical analysis.
 
-### Case Study 2: "The 30-Field Initiative Template"
+### Case Study 3: Backward Compatibility vs Technical Debt
+**Conflict**: Backward compatibility (Level 4) vs System integrity (Level 2)
 
-**Scenario**: Product management team proposes adding 20 more fields to initiative template for better tracking (quality). Engineering teams complain it takes 45 minutes to create an initiative (performance).
+**Logical Analysis**:
+- Technical debt can accumulate to logical impossibility (unmaintainable system)
+- Backward compatibility serves continuity, not indefinite preservation of errors
+- Therefore: When debt threatens system logic, structured migration is logically necessary
 
-**Conflicting Principles**:
-- Commandment #7: Performance Matters
-- Commandment #8: Quality Over Quantity
+**Resolution**: Provide logical migration path. Break compatibility if and only if:
+1. Current state creates logical contradictions
+2. No logical way to maintain both
+3. Clear, documented migration exists
 
-**Resolution**:
-1. **Measured current state**: Average 15 minutes to fill existing template
-2. **Tested proposed state**: 45 minutes for 30-field version (3x slower)
-3. **Evaluated quality gain**: Could not demonstrate 3x better outcomes
-4. **Compromise**: Added 3 new optional fields, kept 8 required fields
-5. **Created power-user version**: Separate detailed template for complex initiatives
-
-**Precedent Established**:
-- Performance degradation requires proportional quality improvement to justify
-- Rule of thumb: 2x time cost requires 2x+ demonstrated value
-- Optional fields preferred over required fields when benefit is unclear
-- Multiple template tiers acceptable (simple vs. detailed)
-
-**Decision Maker**: Engineering leadership with input from both teams.
-
----
-
-### Case Study 3: "The Hardware Team Custom Template"
-
-**Scenario**: Hardware engineering team wants custom initiative template with 10 hardware-specific fields (flexibility). Platform team says this breaks automation and creates inconsistency (determinism).
-
-**Conflicting Principles**:
-- Commandment #3: Support Many Use Cases (flexibility)
-- Commandment #5: Deterministic & Reliable
-
-**Resolution**:
-1. **Identified automation dependencies**: Workflows only use 5 core fields
-2. **Standardized interface**: 5 core fields must be present and named consistently
-3. **Allowed customization**: Hardware team can add additional fields
-4. **Naming convention**: Custom fields prefixed with "hw-" to prevent collisions
-5. **Documentation requirement**: Custom templates must document their extensions
-
-**Precedent Established**:
-- **"Standardize interfaces, customize implementations"**
-- Core fields for automation are non-negotiable
-- Extension points allow specialization without breaking consistency
-- Namespacing prevents conflicts
-
-**Decision Maker**: Platform team sets core interface, individual teams customize within those constraints.
-
----
-
-### Case Study 4: "The Token Expiration Incident"
-
-**Scenario**: ORG_PROJECT_TOKEN expired after 90 days (security). Workflow silently failed for 2 weeks. Critical initiative not tracked in project board (reliability).
-
-**Conflicting Principles**:
-- Commandment #2: Security (short-lived tokens)
-- Commandment #5: Deterministic & Reliable (always works)
-
-**Resolution**:
-1. **Immediate fix**: Manual token refresh, added calendar reminder
-2. **Root cause**: No monitoring, no expiration warnings
-3. **Long-term fix**:
-   - Added workflow to check token validity weekly
-   - Alert 14 days before expiration
-   - Escalate if workflow fails 3x
-   - Document token lifecycle in SETUP.md
-4. **Considered alternatives**: GitHub App (doesn't expire) vs PAT (more flexible)
-5. **Decision**: Stick with PAT, add robust monitoring
-
-**Precedent Established**:
-- Security measures (token expiration) must include operational safeguards (monitoring)
-- Silent failures are unacceptable
-- "It works or it alerts" - no silent degradation
-- Document lifecycle management for time-limited credentials
-
-**Decision Maker**: SRE team + Platform team.
-
----
-
-### Case Study 5: "The SEV-1 Template Paradox"
-
-**Scenario**: During database outage (SEV-1), on-call engineer spent 12 minutes filling out incident template (performance). CEO asked why engineers were documenting instead of fixing (quality of response).
-
-**Conflicting Principles**:
-- Commandment #7: Performance Matters (fast action)
-- Commandment #10: Transparency (document everything)
-- Operational Integrity: Fix it now
-
-**Resolution**:
-1. **Created two-phase process**:
-   - **Phase 1 (During incident)**: Minimal 2-field template ("SEV-1 started: [title]")
-   - **Phase 2 (After mitigation)**: Convert to full incident template
-2. **Established "break glass" protocol**: During SEV-1, skip process if it slows response
-3. **Post-incident requirement**: Full documentation within 24 hours of resolution
-4. **Training**: "Fix first, document after" for critical incidents
-
-**Precedent Established**:
-- **Operational integrity > process compliance during active incidents**
-- Process can be deferred, not skipped
-- Lightweight capture during crisis, thorough documentation after
-- Time-to-mitigation is the primary SEV-1 metric
-
-**Decision Maker**: Incident commander (on-call engineer) during incident, no approval needed.
-
----
+**Logical Outcome**: Stability respected until it contradicts higher logical necessities.
 
 ## Escalation Protocols
 
-When conflicts cannot be resolved using this framework:
+### Standard Resolution (90% of conflicts)
+1. **Apply Hierarchy**: Check if conflict is between different levels → Higher prevails
+2. **Apply Logic Tests**: Both same level? → Test logical consistency of each position
+3. **Apply Decision Framework**: Use 7-step logical analysis above
+4. **Document**: Record logical reasoning for precedent
 
-### Step 1: Initial Assessment (Self-Service)
-**Who**: Anyone encountering the conflict
-**Time**: 15 minutes
-**Action**:
-1. Review this document
-2. Identify which principles are in tension
-3. Check if precedent case studies apply
-4. Consult priority hierarchy
+### Complex Escalation (10% of conflicts)
+1. **Convene Logic Review**: Assemble stakeholders familiar with logical framework
+2. **Present Logical Arguments**: Each position must present logical case
+3. **Identify Logical Flaws**: Collaboratively find fallacies, contradictions, gaps
+4. **Synthesize**: Seek logically superior solution that transcends initial positions
+5. **Final Logical Arbitration**: If synthesis fails, return to Level 0 → Logic prevails
+6. **Update Framework**: If new logical insight emerges, update this document
 
-**Outcome**: 70% of conflicts resolved here.
+## Special Cases
 
----
+### When Logic Appears to Conflict with Ethics
+Logic does not conflict with ethics; rather, logic is the foundation of coherent ethics.
+- If an action seems "logical but unethical," the logical analysis is incomplete
+- True logical analysis includes long-term consequences, systemic effects, and human values
+- Ethics emerges from logical analysis of sustainable human cooperation
 
-### Step 2: Team Discussion (Collaborative)
-**Who**: Affected teams + project owner
-**Time**: 1-2 days
-**Action**:
-1. Create issue labeled `principle-conflict`
-2. Document the conflict clearly
-3. Tag relevant stakeholders
-4. Async discussion in issue comments
-5. Timebox to 48 hours
+### When Logic Appears to Conflict with Pragmatism
+Logic does not ignore reality; it operates within it.
+- "Logically ideal but impractical" indicates constraints weren't included in logical model
+- Add real-world constraints as logical premises
+- Arrive at optimally logical solution given actual reality
 
-**Outcome**: 20% of conflicts resolved here.
-
----
-
-### Step 3: Engineering Leadership (Arbitration)
-**Who**: Engineering manager + tech lead + relevant specialists (security, legal, etc.)
-**Time**: 1 week
-**Action**:
-1. Escalate issue to engineering leadership
-2. Synchronous meeting with decision-makers
-3. Document trade-offs explicitly
-4. Make decision with clear rationale
-5. Update this document with new precedent if applicable
-
-**Outcome**: 9% of conflicts resolved here.
-
----
-
-### Step 4: Executive Decision (Rare)
-**Who**: CTO or equivalent
-**Time**: 2 weeks
-**Action**:
-1. Create RFC document with full context
-2. Present to executive leadership
-3. Executive makes final call
-4. Decision is binding
-5. Becomes new precedent
-
-**Outcome**: <1% of conflicts require this level.
-
----
-
-## Amending This Framework
-
-This document is a living guide and should evolve as we learn.
-
-### Amendment Process
-
-1. **Propose**: Create issue labeled `principle-amendment`
-2. **Discuss**: Minimum 1 week feedback period
-3. **Consensus**: No strong unresolved objections
-4. **Document**: Update this file via PR
-5. **Announce**: Communicate change to organization
-6. **Review**: Quarterly retrospective on amendments
-
-### Who Can Propose Amendments?
-Anyone in the organization.
-
-### Who Approves Amendments?
-- Minor clarifications: Project maintainer
-- New precedent case studies: Engineering leadership
-- Changes to hierarchy or framework: Consensus (Engineering leadership + 3+ team representatives)
-
----
-
-## Quick Reference: Decision Tree
-
-```
-[Principle Conflict]
-        |
-        ↓
-    [Legal/Compliance involved?]
-     Yes → Legal decides
-     No → Continue
-        |
-        ↓
-    [Active security risk?]
-     Yes → Security decides
-     No → Continue
-        |
-        ↓
-    [Active SEV-1 incident?]
-     Yes → Incident commander decides (fix first, process after)
-     No → Continue
-        |
-        ↓
-    [Precedent case study applies?]
-     Yes → Follow precedent
-     No → Continue
-        |
-        ↓
-    [Priority hierarchy clear winner?]
-     Yes → Higher level wins
-     No → Continue
-        |
-        ↓
-    [Escalate to team discussion]
-     Resolved? → Document decision
-     Not resolved? → Engineering leadership
-```
-
----
-
-## Principles Compatibility Matrix
-
-Quick reference for which principles are typically compatible (✅), require trade-offs (⚠️), or frequently conflict (⚠️🔴):
-
-|   | Free/Open | Privacy | Flexible | Beginner | Deterministic | Safe | Performance | Quality | Community | Transparent | Compat | Security | Interop | Clarity | Inclusive | Stable |
-|---|-----------|---------|----------|----------|---------------|------|-------------|---------|-----------|-------------|--------|----------|---------|---------|-----------|--------|
-| **Free/Open** | - | ⚠️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
-| **Privacy** | ⚠️ | - | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⚠️ | ⚠️🔴 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Flexible** | ✅ | ⚠️ | - | ⚠️ | ⚠️🔴 | ⚠️ | ⚠️ | ⚠️ | ✅ | ✅ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ |
-| **Beginner** | ✅ | ✅ | ⚠️ | - | ✅ | ✅ | ⚠️🔴 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Deterministic** | ✅ | ✅ | ⚠️🔴 | ✅ | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Safe** | ✅ | ✅ | ⚠️ | ✅ | ✅ | - | ⚠️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Performance** | ✅ | ⚠️ | ⚠️ | ⚠️🔴 | ✅ | ⚠️ | - | ⚠️🔴 | ✅ | ⚠️ | ⚠️ | ⚠️ | ✅ | ⚠️ | ✅ | ✅ |
-| **Quality** | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ⚠️🔴 | - | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Community** | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | - | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
-| **Transparent** | ✅ | ⚠️🔴 | ✅ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | - | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
-| **Compat** | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | - | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| **Security** | ⚠️ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ⚠️ | ✅ | ⚠️ | ⚠️ | ✅ | - | ✅ | ✅ | ✅ | ✅ |
-
-Legend:
-- ✅ Typically compatible
-- ⚠️ Requires trade-offs
-- ⚠️🔴 Frequently conflicts (use framework above)
-
----
+### When Logic Requires Uncertainty Acknowledgment
+Logic includes probability theory and epistemic humility.
+- "We don't know" is a logically valid state
+- Acting under uncertainty requires logical risk analysis
+- The most logical choice may be to gather more information
 
 ## Living Document Commitment
 
-This framework will be reviewed and updated:
-- **Quarterly**: Light review of relevance
-- **Annually**: Deep review with precedent case study refresh
-- **As needed**: When new conflicts emerge that aren't covered
+This framework itself is subject to logical scrutiny:
+- If logical errors are found in this document, they must be corrected
+- If better logical frameworks emerge, they should be adopted
+- The commitment to logic supersedes commitment to any particular formulation
 
-Last updated: 2025-11-01
-Next scheduled review: 2026-02-01 (Q1 2026)
+**The only unchangeable principle is the commitment to logic itself.**
 
 ---
 
-*This framework is designed to help us make better decisions when principles pull in different directions. It's a guide, not a rule book. Use judgment, document rationale, and learn from outcomes.*
+*Last updated: 2025-11-18*
+*Version: 2.0 - Logic-First Refactor*

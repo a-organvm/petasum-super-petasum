@@ -181,6 +181,35 @@ If managing multiple organizations:
 - Update documentation as processes evolve
 - Archive or close stale org-wide issues
 
+## Organizational Principles
+
+This repository operates under a **logic-first framework**:
+
+- **[LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md)**: Philosophical and practical foundations
+- **[PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md)**: Conflict resolution matrix and hierarchy
+- **[COMMANDMENTS.md](COMMANDMENTS.md)**: Core principles with logical derivations
+
+**Why this matters for setup**: When making configuration decisions, use logical analysis:
+1. What is the goal? (Clear question)
+2. What are the constraints? (Premises)
+3. What options exist? (Possibilities)
+4. Which option logically best achieves the goal given constraints? (Reasoning)
+5. What are the potential contradictions or issues? (Verification)
+
+Example:
+```
+Question: How many severity levels should incidents have?
+
+Logical Analysis:
+- Too few: Cannot distinguish critical from minor (communication loss)
+- Too many: Confusion about which to use (decision paralysis)
+- Industry standard: 3-4 levels (empirical data)
+- Team size: Small teams need simpler systems (constraint)
+
+Conclusion: 3 levels (Critical, High, Medium) balances clarity and simplicity
+Logic: Optimizes communication (Level 3) within operational constraints (Level 2)
+```
+
 ## Support
 
 For questions or issues with this setup:
@@ -188,6 +217,7 @@ For questions or issues with this setup:
 - Check the README for additional context
 - Review GitHub's documentation on issue templates and Projects
 - See [COMMANDMENTS.md](COMMANDMENTS.md) for guiding principles
+- **When asking questions, frame them with logical reasoning for better answers**
 
 ## Next Steps
 
