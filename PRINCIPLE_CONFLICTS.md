@@ -56,6 +56,8 @@ Principles derived from logical analysis of sustainable evolution:
 | **Interpretation Dispute** | Return to logical first principles | Clearest logical derivation |
 | **Pragmatic vs Ideal** | Logical analysis of actual constraints | Optimally logical within reality |
 | **Short-term vs Long-term** | Logical projection of consequences | Maximum long-term logical value |
+| **Incomplete Information** | Document reasoning gaps, make provisional decision, revisit when data available | Best available logic + transparency |
+| **Time-Constrained Decision** | Use heuristics derived from logic, document shortcuts taken | Fastest reasonable logic with clear limitations |
 | **Individual vs Collective** | Logical analysis of system effects | Systemically sustainable logic |
 
 ## Logic-Based Decision Framework

@@ -140,6 +140,8 @@ Use this checklist to track implementation progress. Each phase includes actiona
 - [ ] Implementation team trained
 - [ ] Project plan approved
 - [ ] **Decision: Proceed to Phase 1? (Yes/No with reasoning)**
+  - **Decision Authority**: Executive Leadership Team or designated Project Sponsor
+  - **Required**: Written rationale for go/no-go decision
 
 ---
 
@@ -279,6 +281,8 @@ Use this checklist to track implementation progress. Each phase includes actiona
 - [ ] Sentiment constructive, not hostile
 - [ ] Resources being utilized
 - [ ] **Decision: Proceed to Phase 2? (Yes/No with reasoning)**
+  - **Decision Authority**: Program Manager + Steering Committee
+  - **Required**: Written rationale for go/no-go decision
 
 ---
 
@@ -452,6 +456,8 @@ Use this checklist to track implementation progress. Each phase includes actiona
 - [ ] Challenges solvable, not fundamental
 - [ ] Pilots articulate value clearly
 - [ ] **Decision: Proceed to Phase 3? (Yes/No with reasoning)**
+  - **Decision Authority**: Program Manager + Pilot Team Leads
+  - **Required**: Written rationale for go/no-go decision
 
 ---
 
@@ -705,6 +711,8 @@ Use this checklist to track implementation progress. Each phase includes actiona
 - [ ] Resistance <5% and isolated
 - [ ] Self-sustaining community forming
 - [ ] **Decision: Proceed to Phase 4? (Yes/No with reasoning)**
+  - **Decision Authority**: Steering Committee + Organization Leadership
+  - **Required**: Written rationale for go/no-go decision
 
 ---
 
@@ -865,6 +873,8 @@ Use this checklist to track implementation progress. Each phase includes actiona
 - [ ] External recognition/interest
 - [ ] Governance structure functioning
 - [ ] **Decision: Proceed to Phase 5? (Yes/No with reasoning)**
+  - **Decision Authority**: Governance Council + Executive Sponsor
+  - **Required**: Written rationale for go/no-go decision
 
 ---
 

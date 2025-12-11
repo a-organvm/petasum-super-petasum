@@ -20,7 +20,16 @@ This repository serves as the **central infrastructure** for the **ivviiviivvi**
 
 ## Logic-First Framework
 
-This repository operates under a comprehensive logic-first framework where **logic is the supreme meta-principle** from which all other principles derive.
+### Why Logic Matters for Issue Tracking
+
+Before diving into philosophical foundations, here's the practical value: **logical consistency prevents common organizational coordination failures**:
+
+- **Fewer conflicts**: Clear hierarchy of principles eliminates debates about which rule to follow
+- **Faster decisions**: Logic-based criteria speed up triage and prioritization
+- **Better outcomes**: Documented reasoning enables learning from past decisions
+- **Scalable coordination**: As organizations grow, logic provides the structure that ad-hoc processes cannot
+
+This repository operates under a comprehensive logic-first framework where **logic is the supreme meta-principle** from which all other principles derive. This isn't academic philosophy—it's a practical tool for making better organizational decisions at scale.
 
 ### Core Framework Documents
 

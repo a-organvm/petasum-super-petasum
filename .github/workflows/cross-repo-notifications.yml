@@ -49,11 +49,11 @@ jobs:
             comment += `**Actions for Repository Maintainers:**\n`;
             comment += `1. Review this issue for applicability to your repository\n`;
             comment += `2. Create a linked issue in your repository if action is needed\n`;
-            comment += `3. Reference this issue as: ivi374forivi/petasum-super-petasum#${issueNumber}\n`;
+            comment += `3. Reference this issue as: ${context.repo.owner}/${context.repo.repo}#${issueNumber}\n`;
             comment += `4. Update this issue with the status of your repository\n\n`;
             comment += `---\n`;
             comment += `*To link an issue from your repository, use:*\n`;
-            comment += `\`\`\`\nRelated to ivi374forivi/petasum-super-petasum#${issueNumber}\n\`\`\``;
+            comment += `\`\`\`\nRelated to ${context.repo.owner}/${context.repo.repo}#${issueNumber}\n\`\`\``;
 
             await github.rest.issues.createComment({
               issue_number: issueNumber,
