@@ -8,8 +8,8 @@
 # Replace all instances of @ivi374forivi/TEAM-NAME-HERE with your actual team names.
 
 # Default owners for everything in the repo
-# These users will be requested for review when someone opens a pull request
-* @ivi374forivi/TEAM-NAME-HERE
+# REQUIRED: Replace @org-name/TEAM-NAME-HERE with your actual team
+* @ORG-NAME-HERE/TEAM-NAME-HERE
 
 # Issue templates - notify when templates are modified
 /.github/ISSUE_TEMPLATE/ @ivi374forivi/TEAM-NAME-HERE
