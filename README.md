@@ -55,6 +55,32 @@ See [COMMANDMENTS.md](COMMANDMENTS.md) for the complete set of principles that g
 
 ---
 
+## When to Use This (And When NOT To)
+
+### This framework is designed for:
+- **Medium-to-large organizations** (20+ repositories, 5+ teams)
+- **Complex coordination needs** across multiple teams and services
+- **Organizations committed to GitHub** as primary development platform
+- **Teams that need structured incident response** across services
+- **Engineering orgs wanting systematic cross-repo initiative tracking**
+
+### You probably DON'T need this if:
+- **Small scale**: < 10 repositories or single team
+- **Simple coordination**: Slack messages and @mentions work fine
+- **Single product**: One team, one main repository
+- **Different tools**: Primary workflow is in Jira, ServiceNow, or PagerDuty
+- **Existing solution works**: If current process is effective, don't fix what isn't broken
+
+### Simpler alternatives to consider:
+- **Small orgs**: Use basic GitHub issues with @mentions and milestones
+- **Single team**: Repository-level issue templates are sufficient
+- **Enterprise with existing tools**: ServiceNow, Jira, or Linear may be better integrated
+- **Incident management**: Dedicated tools like PagerDuty or Opsgenie for production incidents
+
+**Rule of thumb**: Start simple. Adopt this framework when coordination pain is felt, not preemptively.
+
+---
+
 ## 📝 Issue Templates
 
 ### Available Templates
