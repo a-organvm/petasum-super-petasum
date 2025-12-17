@@ -24,7 +24,16 @@ body:
       description: Select all repositories that are affected by this issue
       options:
         - label: All repositories
-        - label: Multiple specific repositories (list in additional context)
+        - label: Multiple specific repositories (please list them below)
+
+  - type: textarea
+    id: specific-repos
+    attributes:
+      label: Specific Repositories
+      description: If you selected "Multiple specific repositories", please list them here (e.g. owner/repo).
+      placeholder: |
+        - owner/repo-a
+        - owner/repo-b
 
   - type: dropdown
     id: severity
@@ -68,9 +77,9 @@ body:
       label: Steps to Reproduce
       description: If applicable, provide steps to reproduce the issue
       placeholder: |
-        1.
-        2.
-        3.
+        1. Go to...
+        2. Click on...
+        3. Observe error...
 
   - type: textarea
     id: proposed-solution
