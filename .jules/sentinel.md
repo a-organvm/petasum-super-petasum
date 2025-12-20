@@ -1,0 +1,4 @@
+## 2025-12-20 - GitHub Actions Script Injection Pattern
+**Vulnerability:** Direct interpolation of GitHub context data (specifically `github.event.issue.labels`) into `actions/github-script` JavaScript code using `${{ }}` syntax.
+**Learning:** This pattern allows malicious input (e.g., crafted label names) to break the JavaScript string syntax, potentially causing script injection or execution failures. This mimics "SQL Injection" but in a CI/CD context. Even if arbitrary code execution is limited by the runner environment, it can disrupt workflows and is a bad practice.
+**Prevention:** Always pass untrusted data (like issue titles, bodies, labels) as environment variables to the `github-script` step using the `env` map, and access them via `process.env.VARIABLE_NAME` inside the script. This separates code from data.
