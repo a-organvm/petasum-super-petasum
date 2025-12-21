@@ -3,6 +3,19 @@ description: Propose a cross-repo change for review.
 title: "[RFC] <short title>"
 labels: [org-wide, rfc, needs-triage]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Logic-First Framework Required
+
+        This RFC MUST adhere to the **Logic-First Framework** (see `LOGIC_FRAMEWORK.md` in the repository root).
+
+        Please ensure your proposal is grounded in clear premises and sound reasoning.
+
+        **Remember:**
+        *   **Premises:** What facts and assumptions are you starting from?
+        *   **Reasoning:** How do these premises lead to your conclusion?
+        *   **Conclusion:** What is the proposed design/approach?
   - type: textarea
     id: summary
     attributes:
@@ -13,14 +26,19 @@ body:
     id: motivation
     attributes:
       label: Motivation
-      placeholder: Why is this needed? Who benefits?
+      description: Justify with Logic. State your Premises.
+      placeholder: |
+        Premise 1: ...
+        Premise 2: ...
+        Reasoning: Therefore, we need...
     validations:
       required: true
   - type: textarea
     id: design
     attributes:
       label: Design/Approach
-      placeholder: Architecture, alternatives, rollout plan
+      description: Proposed Conclusion/Solution.
+      placeholder: Architecture, alternatives, rollout plan. Adhere to the Logic Framework.
     validations:
       required: true
   - type: textarea
