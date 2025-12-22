@@ -18,48 +18,60 @@ jobs:
         run: |
           echo "Issue has org-wide label"
 
-env:
-  ISSUE_TITLE: ${{ github.event.issue.title }}
-  ISSUE_NUMBER: ${{ github.event.issue.number }}
-  ISSUE_URL: ${{ github.event.issue.html_url }}
-  ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-run: |
-  echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
-  echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
-  echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
-  echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
-          echo "issue_author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
+      - name: Extract issue details
+        id: issue_details
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
+          # Handle potential multiline title safely
+          {
+            echo "issue_title<<EOF"
+            echo "$ISSUE_TITLE"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          echo "issue_url=$ISSUE_URL" >> "$GITHUB_OUTPUT"
+          echo "issue_author=$ISSUE_AUTHOR" >> "$GITHUB_OUTPUT"
 
       - name: Determine severity and urgency
         id: categorize
+        env:
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
           echo "labels=$LABELS"
 
           if echo "$LABELS" | grep -q "urgent\|critical"; then
-            echo "priority=urgent" >> $GITHUB_OUTPUT
-            echo "emoji=🚨" >> $GITHUB_OUTPUT
+            echo "priority=urgent" >> "$GITHUB_OUTPUT"
+            echo "emoji=🚨" >> "$GITHUB_OUTPUT"
           elif echo "$LABELS" | grep -q "high-priority\|security"; then
-            echo "priority=high" >> $GITHUB_OUTPUT
-            echo "emoji=⚠️" >> $GITHUB_OUTPUT
+            echo "priority=high" >> "$GITHUB_OUTPUT"
+            echo "emoji=⚠️" >> "$GITHUB_OUTPUT"
           else
-            echo "priority=normal" >> $GITHUB_OUTPUT
-            echo "emoji=📢" >> $GITHUB_OUTPUT
+            echo "priority=normal" >> "$GITHUB_OUTPUT"
+            echo "emoji=📢" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Post comment with notification info
         uses: actions/github-script@v7
+        env:
+          PRIORITY: ${{ steps.categorize.outputs.priority }}
+          EMOJI: ${{ steps.categorize.outputs.emoji }}
         with:
           script: |
-            const priority = '${{ steps.categorize.outputs.priority }}';
-            const emoji = '${{ steps.categorize.outputs.emoji }}';
+            const { PRIORITY, EMOJI } = process.env;
 
-            let message = `${emoji} **Organization-Wide Issue Alert**\n\n`;
+            let message = `${EMOJI} **Organization-Wide Issue Alert**\n\n`;
             message += `This issue has been tagged as organization-wide and will be tracked centrally.\n\n`;
-            message += `**Priority:** ${priority}\n`;
-            message += `**Labels:** ${{ join(github.event.issue.labels.*.name, ', ') }}\n\n`;
+            message += `**Priority:** ${PRIORITY}\n`;
 
-            if (priority === 'urgent') {
+            // Safe access to labels via context
+            const labels = context.payload.issue.labels.map(l => l.name).join(', ');
+            message += `**Labels:** ${labels}\n\n`;
+
+            if (PRIORITY === 'urgent') {
               message += `⚠️ This is marked as **URGENT** and requires immediate attention from relevant teams.\n\n`;
             }
 
