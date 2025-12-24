@@ -1,40 +1,75 @@
+---
 name: RFC (org-wide)
-description: Propose a cross-repo change for review.
+description: >
+  Propose a cross-repo change for review.
 title: "[RFC] <short title>"
 labels: [org-wide, rfc, needs-triage]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to propose a Request for Comments (RFC)!
+
+        This template helps structure your proposal clearly.
+        Consider referencing the
+        [Logic-First Framework](../../LOGIC_FRAMEWORK.md)
+        to strengthen your reasoning.
+
   - type: textarea
     id: summary
     attributes:
-      label: Summary
+      label: 📋 Executive Summary
+      description: A brief overview of the proposal.
+      placeholder: What are we doing and why?
     validations:
       required: true
+
   - type: textarea
     id: motivation
     attributes:
-      label: Motivation
-      placeholder: Why is this needed? Who benefits?
+      label: 🧠 Motivation & Premises
+      description: >
+        What is the problem? What facts (premises) drive this change?
+      placeholder: |
+        Current state: ...
+        Problem: ...
+        Goal: ...
     validations:
       required: true
+
   - type: textarea
     id: design
     attributes:
-      label: Design/Approach
-      placeholder: Architecture, alternatives, rollout plan
+      label: 🏗️ Design & Approach
+      description: The proposed solution and architecture.
+      placeholder: |
+        Proposal: ...
+        Architecture details: ...
+        Rollout plan: ...
     validations:
       required: true
+
   - type: textarea
     id: impact
     attributes:
-      label: Affected repos/teams
-      placeholder: Repos, APIs, contracts
+      label: 💥 Affected repos/teams
+      description: Who and what will be impacted?
+      placeholder: Repos, APIs, contracts...
     validations:
       required: true
+
   - type: textarea
     id: risks
     attributes:
-      label: Risks and mitigations
+      label: 🛡️ Risks & Verifiability
+      description: What are the risks? How will we verify success?
+      placeholder: |
+        Risks: ...
+        Mitigations: ...
+        Verification plan: ...
+
   - type: textarea
     id: metrics
     attributes:
-      label: Success metrics
+      label: 📊 Success Metrics
+      description: Key Performance Indicators (KPIs) or success criteria.
