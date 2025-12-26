@@ -13,23 +13,6 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'org-wide')
 
     steps:
-      - name: Check if this is an org-wide issue
-        id: check_labels
-        run: |
-          echo "Issue has org-wide label"
-
-env:
-  ISSUE_TITLE: ${{ github.event.issue.title }}
-  ISSUE_NUMBER: ${{ github.event.issue.number }}
-  ISSUE_URL: ${{ github.event.issue.html_url }}
-  ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-run: |
-  echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
-  echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
-  echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
-  echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
-          echo "issue_author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
-
       - name: Determine severity and urgency
         id: categorize
         run: |
@@ -90,9 +73,9 @@ run: |
       - name: Create notification summary
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_AUTHOR: ${{ steps.issue_details.outputs.issue_author }}
-          ISSUE_NUMBER: ${{ steps.issue_details.outputs.issue_number }}
-          ISSUE_URL: ${{ steps.issue_details.outputs.issue_url }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
           PRIORITY: ${{ steps.categorize.outputs.priority }}
           LABELS: ${{ join(github.event.issue.labels.*.name, ', ') }}
         run: |
