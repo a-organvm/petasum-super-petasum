@@ -6,7 +6,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this template to suggest improvements to processes, workflows, or practices that affect the entire organization.
+        Use this template to suggest improvements to processes, workflows,
+        or practices that affect the entire organization.
+
+        **Note:** Please ensure your proposal aligns with our
+        [Logic-First Framework](../../LOGIC_FRAMEWORK.md).
+        Proposals with clear logical reasoning are more likely to be accepted.
 
   - type: textarea
     id: current-process
@@ -21,7 +26,8 @@ body:
     id: problems
     attributes:
       label: Problems with Current Process
-      description: What issues or inefficiencies exist with the current approach?
+      description: >
+        What issues or inefficiencies exist with the current approach?
       placeholder: What's not working well?
     validations:
       required: true
