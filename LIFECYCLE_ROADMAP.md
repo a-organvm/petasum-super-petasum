@@ -38,6 +38,8 @@ Foundation → Awareness → Adoption → Integration → Maturation → Evoluti
 4. **Feedback Loops**: Continuous adjustment based on observed results
 5. **Inclusive Rollout**: Bring all stakeholders along the journey
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Phase 0: Foundation (Weeks 1-2)
@@ -131,6 +133,8 @@ Conclusion: If all premises true → proceed to Phase 1
 Otherwise → address gaps before continuing
 ```
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Phase 1: Awareness (Weeks 3-4)
@@ -220,6 +224,8 @@ Premises:
 Conclusion: If premises true → proceed to Phase 2
 Otherwise → extend Phase 1, address specific gaps
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -319,6 +325,8 @@ Premises:
 Conclusion: If premises true → proceed to Phase 3
 Otherwise → iterate on pilots, address root issues
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -452,6 +460,8 @@ Premises:
 Conclusion: If premises true → proceed to Phase 4
 Otherwise → strengthen integration, address gaps
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -593,6 +603,8 @@ Conclusion: If premises true → proceed to Phase 5
 Otherwise → continue maturation, address specific gaps
 ```
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Phase 5: Evolution (Year 2+)
@@ -679,6 +691,8 @@ Otherwise → continue maturation, address specific gaps
 - Organization adapts framework to new contexts
 - Framework is integral to organizational identity
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Continuous Improvement Loop
@@ -727,6 +741,8 @@ Observe → Orient → Decide → Act
 - Monthly: Organization metrics review
 - Quarterly: Framework version updates
 - Annually: Strategic framework assessment
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -791,6 +807,8 @@ Observe → Orient → Decide → Act
 - Recent decisions logged
 - Conflicts resolved
 - Learning resources accessed
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -923,6 +941,8 @@ Observe → Orient → Decide → Act
 4. Publish framework evolution roadmap
 5. Celebrate framework refinements publicly
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Success Criteria
@@ -968,6 +988,8 @@ The framework has succeeded when:
 4. **It creates value**: Measurable competitive advantage, business outcomes, talent advantage
 5. **It's shared**: Organization contributes back to broader community, elevating field
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Governance and Decision Rights
@@ -1008,6 +1030,8 @@ The framework has succeeded when:
 - Mentor new members
 - Drive innovation
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Adaptation Guidelines
@@ -1047,6 +1071,8 @@ Premises:
 Conclusion: If all premises true → adapt
 Otherwise → continue current approach
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
