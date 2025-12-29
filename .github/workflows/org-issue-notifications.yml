@@ -18,24 +18,36 @@ jobs:
         run: |
           echo "Issue has org-wide label"
 
-env:
-  ISSUE_TITLE: ${{ github.event.issue.title }}
-  ISSUE_NUMBER: ${{ github.event.issue.number }}
-  ISSUE_URL: ${{ github.event.issue.html_url }}
-  ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-run: |
-  echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
-  echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
-  echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
-  echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
-          echo "issue_author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
+      - name: Extract issue details
+        id: issue_details
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
+          echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
+          echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
+          echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
 
       - name: Determine severity and urgency
         id: categorize
+        env:
+          LABELS_JSON: ${{ toJson(github.event.issue.labels) }}
         run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
+          # Use jq or simple string matching on the JSON to be safe, or just careful iteration
+          # To be safe from shell injection, we avoid direct interpolation of names into the script
+          # But for simplicity in bash without jq (if not available), we can rely on env vars
+
+          # Parsing JSON with jq is safest, but if we don't have jq installed, we can iterate.
+          # Ubuntu runners have jq.
+
+          # Extract label names
+          LABELS=$(echo "$LABELS_JSON" | jq -r '.[].name' | tr '\n' ',' | sed 's/,$//')
           echo "labels=$LABELS"
 
+          # Check priority
           if echo "$LABELS" | grep -q "urgent\|critical"; then
             echo "priority=urgent" >> $GITHUB_OUTPUT
             echo "emoji=🚨" >> $GITHUB_OUTPUT
@@ -49,15 +61,21 @@ run: |
 
       - name: Post comment with notification info
         uses: actions/github-script@v7
+        env:
+          PRIORITY: ${{ steps.categorize.outputs.priority }}
+          EMOJI: ${{ steps.categorize.outputs.emoji }}
         with:
           script: |
-            const priority = '${{ steps.categorize.outputs.priority }}';
-            const emoji = '${{ steps.categorize.outputs.emoji }}';
+            const priority = process.env.PRIORITY;
+            const emoji = process.env.EMOJI;
+
+            // Get labels directly from context to avoid injection
+            const labels = context.payload.issue.labels.map(l => l.name).join(', ');
 
             let message = `${emoji} **Organization-Wide Issue Alert**\n\n`;
             message += `This issue has been tagged as organization-wide and will be tracked centrally.\n\n`;
             message += `**Priority:** ${priority}\n`;
-            message += `**Labels:** ${{ join(github.event.issue.labels.*.name, ', ') }}\n\n`;
+            message += `**Labels:** ${labels}\n\n`;
 
             if (priority === 'urgent') {
               message += `⚠️ This is marked as **URGENT** and requires immediate attention from relevant teams.\n\n`;
