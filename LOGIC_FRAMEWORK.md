@@ -1,12 +1,15 @@
 # Logic Framework: Philosophical and Practical Foundations
 
 ## Table of Contents
+<a id="table-of-contents"></a>
+
 1. [Why Logic First?](#why-logic-first)
 2. [What is Logic?](#what-is-logic)
 3. [The Logic-First Philosophy](#the-logic-first-philosophy)
 4. [Practical Applications](#practical-applications)
 5. [Common Misconceptions](#common-misconceptions)
 6. [Advanced Topics](#advanced-topics)
+7. [Living Philosophy](#living-philosophy)
 
 ---
 
@@ -44,6 +47,8 @@ Organizations that embrace logical primacy gain:
 3. **Sustainable Growth**: Long-term planning based on logical projections
 4. **Effective Communication**: Shared language of rational discourse
 5. **Continuous Improvement**: Ability to challenge and refine any practice through logic
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -170,6 +175,8 @@ Example:
    - ✗ "This approach is best because it's the optimal solution"
    - ✓ "This approach is best because it minimizes latency and maximizes throughput"
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## The Logic-First Philosophy
@@ -240,6 +247,8 @@ In all discussions and decisions:
 - Personal attacks
 - Intentional ambiguity
 - Refusing to engage with logical criticism
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -330,6 +339,8 @@ Measure:
 
 Conclusion: Logical structure improves efficiency (empirically verified)
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -435,6 +446,8 @@ All perspectives can be:
 
 Logic doesn't privilege one culture, person, or tradition—it's the universal tool for evaluating ANY claim from ANY source.
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Advanced Topics
@@ -513,6 +526,8 @@ Example:
 
 **Response**: Accept fundamental uncertainty while still using logic as our best tool.
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Living Philosophy
@@ -530,6 +545,8 @@ This framework itself is subject to logical scrutiny and refinement.
 - Superior logic supersedes existing documentation
 
 **The only absolute is the commitment to logic itself.**
+
+[Back to Top](#table-of-contents)
 
 ---
 
