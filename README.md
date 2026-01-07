@@ -1,8 +1,11 @@
+<a id="top"></a>
 # petasum-super-petasum
 
 Hat on a hat, galerum super galerum, quidquid superat, ad abundantiam, et cetera.
 
 A template repository for organization-wide GitHub issue tracking infrastructure, built on a **logic-first framework**.
+
+[Back to Top](#top)
 
 ---
 
@@ -89,6 +92,8 @@ This repository follows a set of [Organization Commandments](COMMANDMENTS.md) in
 
 See [COMMANDMENTS.md](COMMANDMENTS.md) for the complete set of principles with their logical derivations.
 
+[Back to Top](#top)
+
 ---
 
 ## 🚀 Quick Start
@@ -116,6 +121,8 @@ See [COMMANDMENTS.md](COMMANDMENTS.md) for the complete set of principles with t
 - It's a feature request for a specific project
 - It's a bug in one repository's code
 
+[Back to Top](#top)
+
 ---
 
 ## When to Use This (And When NOT To)
@@ -141,6 +148,8 @@ See [COMMANDMENTS.md](COMMANDMENTS.md) for the complete set of principles with t
 - **Incident management**: Dedicated tools like PagerDuty or Opsgenie for production incidents
 
 **Rule of thumb**: Start simple. Adopt this framework when coordination pain is felt, not preemptively.
+
+[Back to Top](#top)
 
 ---
 
@@ -168,6 +177,8 @@ To redirect users to this central repository from other repos, copy the template
 ```
 
 This provides a clear path for users to file organization-wide issues in the correct location.
+
+[Back to Top](#top)
 
 ---
 
@@ -201,6 +212,8 @@ The repository uses a comprehensive labeling system defined in [`.github/labels.
 - `cross-repo` - Affects multiple repositories
 - `all-repos` - Affects all repositories
 
+[Back to Top](#top)
+
 ---
 
 ## 🤖 Automation
@@ -227,6 +240,8 @@ The repository uses a comprehensive labeling system defined in [`.github/labels.
 
 **Workflow:** [`.github/workflows/cross-repo-notifications.yml`](.github/workflows/cross-repo-notifications.yml)
 
+[Back to Top](#top)
+
 ---
 
 ## 💬 Discussions
@@ -244,6 +259,8 @@ For topics that don't require issue tracking, use **GitHub Discussions**:
 | Brainstorming ideas | Tracked work items |
 | General announcements | Bug reports |
 | Community feedback | Feature requests with clear scope |
+
+[Back to Top](#top)
 
 ---
 
@@ -265,6 +282,8 @@ Organization-wide issues can be tracked using **GitHub Projects**:
 - **By Status**: Monitor progress of issues
 - **By Team**: Assign ownership to teams
 
+[Back to Top](#top)
+
 ---
 
 ## 🔗 Linking Issues Across Repositories
@@ -285,6 +304,10 @@ When an organization-wide issue affects specific repositories:
 - **Traceability**: Track impact across repositories
 - **Context**: Provide repository-specific context
 - **Notifications**: Keep stakeholders informed
+[Back to Top](#top)
+
+---
+
 ## 🛠️ Configuration for Repository Maintainers
 
 ### Adding the Redirect Template to Your Repository
@@ -296,6 +319,8 @@ curl -o .github/ISSUE_TEMPLATE/redirect-to-org-repo.yml \
 ```
 
 Or manually copy [redirect-to-org-repo.yml](.github/ISSUE_TEMPLATE/redirect-to-org-repo.yml) to your repository's `.github/ISSUE_TEMPLATE/` directory.
+
+[Back to Top](#top)
 
 ---
 
@@ -324,6 +349,8 @@ Or manually copy [redirect-to-org-repo.yml](.github/ISSUE_TEMPLATE/redirect-to-o
 3. **Provide Updates**: Share progress on your repository's work
 4. **Close When Done**: Update central issue when resolved in your repo
 
+[Back to Top](#top)
+
 ---
 
 ## 🤝 Contributing
@@ -337,6 +364,8 @@ This repository accepts contributions to improve the infrastructure:
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for contribution guidelines.
 
+[Back to Top](#top)
+
 ---
 
 ## 📞 Support
@@ -347,6 +376,8 @@ Need help with organization-wide issue tracking?
 - **Discussions**: Ask in [Organization Discussions](https://github.com/orgs/ivviiviivvi/discussions)
 - **Issues**: File an issue in this repository
 - **Contact**: Reach out to organization administrators
+
+[Back to Top](#top)
 
 ---
 
@@ -378,6 +409,8 @@ This repository implements organization-wide issue tracking with a logic-first a
 - Measurement frameworks and success criteria
 - Risk mitigation strategies
 - Continuous improvement loops
+
+[Back to Top](#top)
 
 ---
 
