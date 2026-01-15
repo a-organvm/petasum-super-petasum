@@ -1,6 +1,7 @@
+---
 name: Cross-Repository Notifications
 
-on:
+"on":
   issues:
     types: [labeled]
 
@@ -64,10 +65,16 @@ jobs:
 
             console.log('Cross-repo notification comment posted');
 
-      - name: Create workflow summary
-        run: |
-          echo "## 🔗 Cross-Repository Notification Sent" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Issue #${{ github.event.issue.number }} has been tagged for cross-repository coordination." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Repository maintainers have been notified to review and take appropriate action." >> $GITHUB_STEP_SUMMARY
+            // ⚡ Optimization: Generate workflow summary in the same step
+            // This saves ~2s overhead of starting a new container step.
+            await core.summary
+              .addHeading("🔗 Cross-Repository Notification Sent", 2)
+              .addRaw(
+                `Issue #${context.payload.issue.number} has been tagged ` +
+                "for cross-repository coordination.\n\n"
+              )
+              .addRaw(
+                "Repository maintainers have been notified to " +
+                "review and take appropriate action."
+              )
+              .write();
