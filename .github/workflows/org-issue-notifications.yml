@@ -1,6 +1,7 @@
+---
 name: Organization-Wide Issue Notifications
 
-on:
+"on":
   issues:
     types: [opened, labeled]
 
@@ -18,22 +19,25 @@ jobs:
         run: |
           echo "Issue has org-wide label"
 
-env:
-  ISSUE_TITLE: ${{ github.event.issue.title }}
-  ISSUE_NUMBER: ${{ github.event.issue.number }}
-  ISSUE_URL: ${{ github.event.issue.html_url }}
-  ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-run: |
-  echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
-  echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
-  echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
-  echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
-          echo "issue_author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
+      - name: Set issue details
+        id: issue_details
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
+          echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
+          echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
+          echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
 
       - name: Determine severity and urgency
         id: categorize
+        env:
+          # Use env var to avoid injection in run script
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
           echo "labels=$LABELS"
 
           if echo "$LABELS" | grep -q "urgent\|critical"; then
@@ -54,28 +58,35 @@ run: |
             const priority = '${{ steps.categorize.outputs.priority }}';
             const emoji = '${{ steps.categorize.outputs.emoji }}';
 
-            let message = `${emoji} **Organization-Wide Issue Alert**\n\n`;
-            message += `This issue has been tagged as organization-wide and will be tracked centrally.\n\n`;
-            message += `**Priority:** ${priority}\n`;
-            message += `**Labels:** ${{ join(github.event.issue.labels.*.name, ', ') }}\n\n`;
+            // Use context directly to avoid injection
+            const labels = context.payload.issue.labels.map(l => l.name)
+              .join(', ');
+
+            let msg = `${emoji} **Organization-Wide Issue Alert**\n\n`;
+            msg += `This issue has been tagged as organization-wide `;
+            msg += `and will be tracked centrally.\n\n`;
+            msg += `**Priority:** ${priority}\n`;
+            msg += `**Labels:** ${labels}\n\n`;
 
             if (priority === 'urgent') {
-              message += `⚠️ This is marked as **URGENT** and requires immediate attention from relevant teams.\n\n`;
+              msg += `⚠️ This is marked as **URGENT** and requires `;
+              msg += `immediate attention from relevant teams.\n\n`;
             }
 
-            message += `### Next Steps:\n`;
-            message += `- [ ] Review and triage this issue\n`;
-            message += `- [ ] Identify affected teams and repositories\n`;
-            message += `- [ ] Create linked issues in affected repositories if needed\n`;
-            message += `- [ ] Add to relevant project boards\n\n`;
-            message += `---\n`;
-            message += `*This notification was automatically generated. Teams can subscribe to notifications by watching this repository.*`;
+            msg += `### Next Steps:\n`;
+            msg += `- [ ] Review and triage this issue\n`;
+            msg += `- [ ] Identify affected teams and repositories\n`;
+            msg += `- [ ] Create linked issues in affected repositories\n`;
+            msg += `- [ ] Add to relevant project boards\n\n`;
+            msg += `---\n`;
+            msg += `*This notification was automatically generated. `;
+            msg += `Teams can subscribe by watching this repository.*`;
 
             await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: message
+              body: msg
             });
 
       - name: Add to project (if configured)
@@ -83,9 +94,9 @@ run: |
         continue-on-error: true
         with:
           script: |
-            // This is a placeholder for adding issues to GitHub Projects
+            // Placeholder for adding issues to GitHub Projects
             // Configure PROJECT_ID in repository secrets to enable this
-            console.log('Project integration can be configured with organization projects');
+            console.log('Project integration can be configured');
 
       - name: Create notification summary
         env:
@@ -94,6 +105,7 @@ run: |
           ISSUE_NUMBER: ${{ steps.issue_details.outputs.issue_number }}
           ISSUE_URL: ${{ steps.issue_details.outputs.issue_url }}
           PRIORITY: ${{ steps.categorize.outputs.priority }}
+          # Use env var to avoid injection in run script.
           LABELS: ${{ join(github.event.issue.labels.*.name, ', ') }}
         run: |
           echo "## 📢 Organization-Wide Issue Notification" >> $GITHUB_STEP_SUMMARY
