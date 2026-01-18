@@ -1,5 +1,7 @@
 # Principle Conflicts Documentation
 
+<a id="top"></a>
+
 ## Prime Directive: Logic Above All
 
 **Logic is the supreme meta-principle that governs all other principles, decisions, and conflict resolutions within this organization.**
@@ -157,6 +159,8 @@ This framework itself is subject to logical scrutiny:
 - The commitment to logic supersedes commitment to any particular formulation
 
 **The only unchangeable principle is the commitment to logic itself.**
+
+[Back to Top](#top)
 
 ---
 
