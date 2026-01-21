@@ -1,5 +1,20 @@
 # Principle Conflicts Documentation
 
+<a id="top"></a>
+
+## Table of Contents
+1. [Prime Directive: Logic Above All](#prime-directive-logic-above-all)
+1. [Principle Hierarchy (Logic-First Framework)](#principle-hierarchy-logic-first-framework)
+1. [Conflict Resolution Matrix](#conflict-resolution-matrix)
+1. [Logic-Based Decision Framework](#logic-based-decision-framework)
+1. [Precedent Case Studies](#precedent-case-studies)
+1. [Escalation Protocols](#escalation-protocols)
+1. [Special Cases](#special-cases)
+1. [Living Document Commitment](#living-document-commitment)
+
+---
+
+
 ## Prime Directive: Logic Above All
 
 **Logic is the supreme meta-principle that governs all other principles, decisions, and conflict resolutions within this organization.**
@@ -10,6 +25,8 @@ All principles, practices, and decisions must be:
 3. **Logically verifiable** - Subject to rational scrutiny and validation
 
 When any principle conflicts with logical consistency, **logic prevails without exception**.
+
+[Back to Top](#top)
 
 ## Principle Hierarchy (Logic-First Framework)
 
@@ -46,6 +63,8 @@ Principles derived from logical analysis of sustainable evolution:
 2. **Interoperability** - Logical enabling of integration
 3. **Privacy Standards** - Logical consequence of autonomy rights
 
+[Back to Top](#top)
+
 ## Conflict Resolution Matrix
 
 | Conflict Type | Logical Resolution Approach | Outcome Criterion |
@@ -60,6 +79,8 @@ Principles derived from logical analysis of sustainable evolution:
 | **Time-Constrained Decision** | Use heuristics derived from logic, document shortcuts taken | Fastest reasonable logic with clear limitations |
 | **Individual vs Collective** | Logical analysis of system effects | Systemically sustainable logic |
 
+[Back to Top](#top)
+
 ## Logic-Based Decision Framework
 
 When facing any decision or conflict:
@@ -71,6 +92,8 @@ When facing any decision or conflict:
 5. **Verify Logical Consistency**: Ensure conclusions don't contradict established truths
 6. **Test Logical Completeness**: Have all relevant logical factors been considered?
 7. **Document Logical Chain**: Make reasoning transparent and verifiable
+
+[Back to Top](#top)
 
 ## Precedent Case Studies
 
@@ -113,6 +136,8 @@ When facing any decision or conflict:
 
 **Logical Outcome**: Stability respected until it contradicts higher logical necessities.
 
+[Back to Top](#top)
+
 ## Escalation Protocols
 
 ### Standard Resolution (90% of conflicts)
@@ -128,6 +153,8 @@ When facing any decision or conflict:
 4. **Synthesize**: Seek logically superior solution that transcends initial positions
 5. **Final Logical Arbitration**: If synthesis fails, return to Level 0 → Logic prevails
 6. **Update Framework**: If new logical insight emerges, update this document
+
+[Back to Top](#top)
 
 ## Special Cases
 
@@ -149,6 +176,8 @@ Logic includes probability theory and epistemic humility.
 - Acting under uncertainty requires logical risk analysis
 - The most logical choice may be to gather more information
 
+[Back to Top](#top)
+
 ## Living Document Commitment
 
 This framework itself is subject to logical scrutiny:
@@ -162,3 +191,6 @@ This framework itself is subject to logical scrutiny:
 
 *Last updated: 2025-11-18*
 *Version: 2.0 - Logic-First Refactor*
+
+
+[Back to Top](#top)
