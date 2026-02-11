@@ -3,6 +3,14 @@
 
 # Petasum Super Petasum
 
+[![CI](https://github.com/organvm-iv-taxis/petasum-super-petasum/actions/workflows/ci.yml/badge.svg)](https://github.com/organvm-iv-taxis/petasum-super-petasum/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)](https://github.com/organvm-iv-taxis/petasum-super-petasum)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/organvm-iv-taxis/petasum-super-petasum/blob/main/LICENSE)
+[![Organ IV](https://img.shields.io/badge/Organ-IV%20Taxis-10B981)](https://github.com/organvm-iv-taxis)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/organvm-iv-taxis/petasum-super-petasum)
+[![Shell](https://img.shields.io/badge/lang-Shell-informational)](https://github.com/organvm-iv-taxis/petasum-super-petasum)
+
+
 **Hat on a hat, galerum super galerum, quidquid superat, ad abundantiam, et cetera.**
 
 A logic-first governance framework and cross-repository issue orchestration system for multi-organ organizations. Petasum provides the structural backbone that keeps distributed repositories, teams, and decision processes logically coherent as they scale.
