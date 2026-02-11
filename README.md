@@ -1,386 +1,497 @@
-# petasum-super-petasum
+[![ORGAN-IV: Taxis](https://img.shields.io/badge/ORGAN--IV-Taxis-e65100?style=flat-square)](https://github.com/organvm-iv-taxis)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-Hat on a hat, galerum super galerum, quidquid superat, ad abundantiam, et cetera.
+# Petasum Super Petasum
 
-A template repository for organization-wide GitHub issue tracking infrastructure, built on a **logic-first framework**.
+**Hat on a hat, galerum super galerum, quidquid superat, ad abundantiam, et cetera.**
 
----
-
-## 📋 Organization-Wide Issue Tracking & Governance
-
-This repository serves as the **central infrastructure** for the **ivviiviivvi** organization, providing:
-
-1. **Organization-wide issue tracking** - Track issues that span multiple repositories
-2. **Governance framework** - Guiding principles and commandments
-3. **Standardized templates** - Consistent reporting of organization-wide concerns
-4. **Automated workflows** - Alert relevant teams and manage issues efficiently
-5. **Cross-repository coordination** - Facilitate collaboration across the organization
-
-**What makes this different**: All templates, processes, and decisions are grounded in logical consistency as the foundational principle. See our [Logic-First Framework](#logic-first-framework) below.
-
-## Logic-First Framework
-
-### Why Logic Matters for Issue Tracking
-
-Before diving into philosophical foundations, here's the practical value: **logical consistency prevents common organizational coordination failures**:
-
-- **Fewer conflicts**: Clear hierarchy of principles eliminates debates about which rule to follow
-- **Faster decisions**: Logic-based criteria speed up triage and prioritization
-- **Better outcomes**: Documented reasoning enables learning from past decisions
-- **Scalable coordination**: As organizations grow, logic provides the structure that ad-hoc processes cannot
-
-This repository operates under a comprehensive logic-first framework where **logic is the supreme meta-principle** from which all other principles derive. This isn't academic philosophy—it's a practical tool for making better organizational decisions at scale.
-
-### Core Framework Documents
-
-1. **[LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md)** - Philosophical and practical foundations
-   - Why logic is self-justifying
-   - How to apply logical reasoning
-   - Common misconceptions addressed
-   - Advanced topics (modal logic, temporal logic, etc.)
-
-2. **[PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md)** - Conflict resolution matrix
-   - 5-level principle hierarchy (Logic → Foundational → Operational → Community → Stability)
-   - Conflict resolution matrix for 7 conflict types
-   - Logic-based decision framework
-   - Precedent case studies
-
-3. **[COMMANDMENTS.md](COMMANDMENTS.md)** - Core principles with logical derivations
-   - 16 principles organized by hierarchy level
-   - Logical derivation for each principle
-   - Application guidelines
-
-4. **[LIFECYCLE_ROADMAP.md](LIFECYCLE_ROADMAP.md)** - Implementation roadmap
-   - 6 phases from foundation to continuous evolution
-   - Measurement framework
-   - Risk mitigation strategies
-   - Success criteria
-
-### Quick Start with Logic-First
-
-When making any decision about this repository or its usage:
-
-1. **State the question clearly**: What exactly are we deciding?
-2. **Identify premises**: What facts and constraints apply?
-3. **Apply logical reasoning**: Which option best achieves the goal?
-4. **Verify consistency**: Does this create contradictions?
-5. **Document the chain**: Record your reasoning
-
-Example from LIFECYCLE_ROADMAP.md:
-```
-Question: How many severity levels should incidents have?
-Logic: Too few = communication loss, too many = decision paralysis
-Conclusion: 3 levels balances clarity and simplicity
-```
-
-## Guiding Principles
-
-**Meta-Principle (Level 0)**: Logic & Logical Consistency
-- All organizational decisions must be logically consistent
-- When principles conflict, logical analysis determines resolution
-- See [PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md) for complete hierarchy
-
-This repository follows a set of [Organization Commandments](COMMANDMENTS.md) inspired by best practices from leading open-source projects including Semgrep, TensorFlow, and Schema.org. All principles are logically derived and classified by hierarchy level:
-
-**Level 1 - Foundational**: Transparency, Clarity & Precision, Verifiability
-**Level 2 - Operational**: Security, Performance, Quality, Determinism, Safe Execution
-**Level 3 - Community**: Open Source, Inclusivity, Beginner-Friendly, Collaboration
-**Level 4 - Stability**: Backward Compatibility, Interoperability, Stability
-
-See [COMMANDMENTS.md](COMMANDMENTS.md) for the complete set of principles with their logical derivations.
+A logic-first governance framework and cross-repository issue orchestration system for multi-organ organizations. Petasum provides the structural backbone that keeps distributed repositories, teams, and decision processes logically coherent as they scale.
 
 ---
 
-## 🚀 Quick Start
+## Table of Contents
 
-### Filing an Organization-Wide Issue
+- [Product Overview](#product-overview)
+- [Orchestration Philosophy](#orchestration-philosophy)
+- [The Logic-First Framework](#the-logic-first-framework)
+- [Technical Architecture](#technical-architecture)
+- [Installation and Quick Start](#installation-and-quick-start)
+- [Features](#features)
+- [Cross-Organ Orchestration](#cross-organ-orchestration)
+- [Governance Model](#governance-model)
+- [Relationship to Agentic Titan](#relationship-to-agentic-titan)
+- [Repository Structure](#repository-structure)
+- [Lifecycle and Roadmap](#lifecycle-and-roadmap)
+- [Related Work](#related-work)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
-1. Go to the [Issues tab](../../issues)
-2. Click **New Issue**
-3. Select the appropriate template:
-   - **Organization-Wide Issue** - General issues affecting multiple repos
-   - **Security Concern** - Security issues requiring attention
-   - **Process Improvement** - Workflow and process suggestions
+---
+
+## Product Overview
+
+### Why "Petasum"?
+
+The petasum (or petasus) is the broad-brimmed winged hat of Hermes, the Greek messenger god who moved freely between realms --- conducting souls, carrying messages, and translating between divine and mortal domains. In the ORGAN system, Petasum Super Petasum occupies an analogous role: it is the governance layer that sits atop other governance layers, the orchestration of orchestration, the hat upon the hat.
+
+The Latin phrase *galerum super galerum* --- hat upon hat --- is not decorative self-reference. It describes a real architectural pattern: **meta-governance**. When an organization spans eight organs, each with its own repositories, workflows, and decision cadences, the coordination problem is not merely technical but epistemological. You need a system that governs how governance itself operates. That is what Petasum provides.
+
+### What This Repository Contains
+
+Petasum Super Petasum is a **template repository** and **living governance specification** for organization-wide GitHub infrastructure. It ships:
+
+1. **A logic-first decision framework** --- a five-level principle hierarchy (Logic > Foundational > Operational > Community > Stability) with formal conflict resolution rules, logical derivation chains for every principle, and a documented escalation protocol.
+
+2. **Organization-wide issue templates** --- structured GitHub Issue forms for cross-repository initiatives, multi-service incidents, and RFCs, all grounded in the logic-first framework.
+
+3. **Automated workflows** --- GitHub Actions that route issues to organization projects, notify affected repositories of cross-cutting concerns, and enforce labeling conventions.
+
+4. **A comprehensive implementation roadmap** --- six phases from foundation through continuous evolution, with gate reviews, success criteria, measurement frameworks, and risk mitigation strategies.
+
+5. **A self-critique and audit trail** --- including a comprehensive critique document, principle conflict matrix, and implementation checklist that tracks adoption across the lifecycle.
+
+### The Problem It Solves
+
+As distributed organizations grow, three coordination failures recur with monotonous regularity:
+
+- **Principle collisions**: Team A optimizes for speed; Team B optimizes for security. Neither is wrong, but without a hierarchy, every cross-team decision becomes a political negotiation rather than a logical resolution.
+- **Issue fragmentation**: A vulnerability affects twelve repositories. Without centralized tracking, each team discovers it independently, patches it differently, and nobody validates cross-repo consistency.
+- **Governance drift**: Early-stage organizations operate on implicit norms. As they scale, those norms diverge per team until the organization is running multiple incompatible governance models simultaneously.
+
+Petasum addresses all three by establishing logic as the supreme meta-principle from which all other organizational principles derive, then providing the templates, workflows, and processes to operationalize that commitment at scale.
+
+---
+
+## Orchestration Philosophy
+
+### Logic as Meta-Principle
+
+Most governance frameworks begin with a list of values and ask teams to balance them. This approach guarantees conflict, because values without a hierarchy produce irresolvable disputes. Petasum takes a different approach: it establishes **logic and logical consistency as the foundational principle** from which all other principles are derived.
+
+This is not an aesthetic preference. Logic is the only self-justifying principle. To argue against logic, you must use logic --- making any such argument self-defeating. Every other organizational value (transparency, security, inclusivity, performance) requires a *reason* to adopt it, and reasons are logical arguments. Logic is the ground on which all other principles stand.
+
+### The Hierarchy of Principles
+
+Petasum organizes all governance principles into five levels, each logically derived from the level above:
+
+| Level | Category | Examples | Logical Basis |
+|-------|----------|----------|---------------|
+| 0 | **Meta-Principle** | Logic and Logical Consistency | Self-justifying; required for all reasoning |
+| 1 | **Foundational** | Transparency, Clarity, Verifiability | Direct logical necessities (hidden logic cannot be validated) |
+| 2 | **Operational** | Security, Performance, Determinism, Quality | Derived from logical analysis of effective systems |
+| 3 | **Community** | Open Source, Inclusivity, Collaboration | Derived from logical analysis of sustainable cooperation |
+| 4 | **Stability** | Backward Compatibility, Interoperability | Derived from logical analysis of sustainable evolution |
+
+When principles at the same level conflict, the framework resolves them through logical analysis of which option better serves the higher-level principle. When principles at different levels conflict, the higher-level principle prevails. This eliminates the "but what about..." paralysis that afflicts value-pluralist governance models.
+
+### Governance as Infrastructure
+
+Petasum treats governance decisions with the same rigor that software engineering applies to infrastructure decisions. Every principle has a logical derivation. Every conflict type has a resolution protocol. Every decision is documented with premises, reasoning, and conclusions. This is not bureaucracy --- it is the organizational equivalent of type safety. Catching contradictions early, in the governance layer, is cheaper than discovering them at deployment time.
+
+---
+
+## The Logic-First Framework
+
+### Core Documents
+
+The framework is specified across four interconnected documents, each serving a distinct function:
+
+**[LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md)** --- The philosophical and practical foundation. Covers why logic is self-justifying, the three laws of classical logic (identity, non-contradiction, excluded middle), key inference rules (modus ponens, modus tollens, hypothetical syllogism), common logical fallacies to avoid, and advanced topics including modal logic, temporal logic, deontic logic, and Godelian limits. This is the document you read once and reference thereafter.
+
+**[COMMANDMENTS.md](COMMANDMENTS.md)** --- Sixteen organizational principles classified by hierarchy level, each with an explicit logical derivation. Drawn from analysis of Semgrep, TensorFlow, and Schema.org governance models, then restructured through the logic-first lens. Principles include Free and Open Source (Level 3), Privacy and Security First (Level 2), Deterministic and Reliable (Level 2), Clarity and Precision (Level 1), and Stability (Level 4), among others.
+
+**[PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md)** --- The conflict resolution matrix. Defines seven conflict types (Principle vs Logic, Same-Level, Different-Level, Interpretation Dispute, Pragmatic vs Ideal, Short-term vs Long-term, Incomplete Information) and provides resolution approaches and outcome criteria for each. Includes precedent case studies: Security vs Ease of Use, Performance vs Feature Completeness, and Backward Compatibility vs Technical Debt.
+
+**[LIFECYCLE_ROADMAP.md](LIFECYCLE_ROADMAP.md)** --- The six-phase implementation plan from Foundation (Weeks 1--2) through Evolution (Year 2+). Each phase has objectives, tasks, deliverables, success criteria, and gate reviews with named decision authorities. The roadmap also specifies a measurement framework (leading and lagging indicators), risk mitigation strategies, and a continuous improvement loop.
+
+### The Seven-Step Decision Method
+
+When making any decision under the Petasum framework:
+
+1. **State the question clearly** --- What exactly are we deciding? What are the success criteria?
+2. **Identify relevant premises** --- What facts do we know? What assumptions are we making? Are the assumptions justified?
+3. **List possible conclusions** --- What are the options? Are there options we have not considered?
+4. **Apply logical reasoning** --- Which conclusions follow from the premises? Which options violate logical principles?
+5. **Verify consistency** --- Does this conclusion contradict established facts or create new contradictions?
+6. **Test completeness** --- Have we considered all relevant factors? What are we potentially missing?
+7. **Document the chain** --- Record premises, reasoning, and conclusion to enable future verification.
+
+This method applies equally to architectural decisions, incident triage, hiring, sprint planning, and cross-organ coordination.
+
+---
+
+## Technical Architecture
+
+### Issue Routing System
+
+Petasum implements a label-driven routing architecture using GitHub's native issue infrastructure:
+
+```
+User Creates Issue (selects template)
+        |
+        v
+GitHub Applies Template
+  - Pre-fills structured fields
+  - Auto-applies labels (org-wide, initiative/incident/rfc, needs-triage)
+  - Sets title format
+        |
+        v
+Workflow Triggered (on: issues [opened, labeled])
+        |
+        v
+Label Detection
+  - org-wide    --> Add to Organization Project
+  - cross-repo  --> Parse body for repo references, post coordination comment
+  - all-repos   --> Notify all repository maintainers
+        |
+        v
+Organization Project Board
+  - Triage view (by priority)
+  - Repository view (by affected repos)
+  - Status view (by progress)
+  - Team view (by ownership)
+```
+
+### Workflow Specifications
+
+**add-to-org-project.yml** --- Triggers on issue open and label events. Detects the `org-wide` label. Adds the issue to the organization-level GitHub Project using the `actions/add-to-project@v1` action. Requires an `ORG_PROJECT_TOKEN` secret with Projects read/write and Issues read/write permissions.
+
+**cross-repo-notifications.yml** --- Triggers on label events for `cross-repo` or `all-repos` labels. Parses the issue body for repository references (pattern: `owner/repo`). Posts a structured coordination comment listing referenced repositories, actions for maintainers, and linking syntax. Uses `actions/github-script@v7` for the GitHub API interaction.
+
+**org-issue-notifications.yml** --- Triggers when the `org-wide` label is applied. Posts a comment with priority classification and next steps. Generates a notification summary for stakeholders.
+
+### Label Taxonomy
+
+The labeling system is defined in `.github/labels.yml` and organized into four categories:
+
+| Category | Labels | Purpose |
+|----------|--------|---------|
+| **Type** | `org-wide`, `security`, `process`, `infrastructure`, `documentation`, `dependency` | Classify the nature of the issue |
+| **Priority** | `urgent`, `high-priority`, `medium-priority`, `low-priority` | Drive triage ordering |
+| **Status** | `needs-triage`, `in-progress`, `blocked`, `waiting-feedback`, `ready-to-implement` | Track workflow state |
+| **Impact** | `breaking-change`, `cross-repo`, `all-repos` | Trigger cross-repository coordination |
+
+### Issue Templates
+
+Three form-based templates (`.yml` format, not markdown) enforce structured data entry:
+
+- **Organization-Wide Initiative** (`org-wide-initiative.yml`) --- For cross-repository initiatives. Fields: summary, problem statement, scope, impacted repositories, owners, success criteria, timeline, risks, communication plan. Auto-labels: `org-wide`, `initiative`, `epic`, `needs-triage`.
+
+- **Organization-Wide Incident** (`org-incident.yml`) --- For multi-service incidents. Fields: severity (SEV-1/2/3 dropdown), start time, detection method, impact assessment, mitigation status, timeline, follow-up actions. Auto-labels: `org-wide`, `incident`, `needs-triage`.
+
+- **RFC** (`org-rfc.yml`) --- For cross-repository proposals. Fields: summary, motivation, design approach, alternatives, affected repos/teams, risks, success metrics. Auto-labels: `org-wide`, `rfc`, `needs-triage`.
+
+A redirect template (`redirect-to-org-repo.yml`) is provided for installation in other repositories, directing users to file organization-wide issues in the central Petasum repository.
+
+---
+
+## Installation and Quick Start
+
+### Option A: Use as a Template
+
+Click **"Use this template"** on the repository page to create a new repository with the full Petasum structure. Then customize:
+
+1. Update `.github/workflows/add-to-org-project.yml` with your organization's Project URL.
+2. Update `.github/ISSUE_TEMPLATE/config.yml` with your organization name and discussion URLs.
+3. Create the labels defined in `.github/labels.yml` in your repository settings.
+4. Create a Fine-Grained Personal Access Token with Projects (R/W) and Issues (R/W) permissions.
+5. Add the token as an organization secret named `ORG_PROJECT_TOKEN`.
+6. Enable GitHub Discussions if desired.
+
+### Option B: Copy Files Manually
+
+```bash
+git clone https://github.com/organvm-iv-taxis/petasum-super-petasum.git
+cp -r petasum-super-petasum/.github your-org-repo/
+cp petasum-super-petasum/COMMANDMENTS.md your-org-repo/
+cp petasum-super-petasum/LOGIC_FRAMEWORK.md your-org-repo/
+cp petasum-super-petasum/PRINCIPLE_CONFLICTS.md your-org-repo/
+```
+
+### Option C: Install the Redirect Template Only
+
+If you only need to redirect users from a specific repository to your central issue tracker:
+
+```bash
+curl -o .github/ISSUE_TEMPLATE/redirect-to-org-repo.yml \
+  https://raw.githubusercontent.com/organvm-iv-taxis/petasum-super-petasum/main/.github/ISSUE_TEMPLATE/redirect-to-org-repo.yml
+```
+
+### Filing Your First Issue
+
+1. Navigate to the [Issues tab](../../issues).
+2. Click **New Issue**.
+3. Select a template: Organization-Wide Issue, Security Concern, or Process Improvement.
+4. Fill out all required fields. The template will guide you.
+5. Submit. The workflow will automatically route the issue to the organization project.
 
 ### When to Use This Repository
 
-✅ **File issues here when:**
-- The issue affects 2 or more repositories
-- It's an organization-wide security concern
-- It requires cross-team coordination
-- It's about organization-wide processes or infrastructure
-- It impacts the entire organization
+**File issues here when:**
+- The issue affects two or more repositories.
+- It is an organization-wide security concern.
+- It requires cross-team coordination or governance decisions.
+- It concerns organization-wide infrastructure, processes, or policies.
 
-❌ **File in specific repositories when:**
-- The issue affects only that single repository
-- It's a feature request for a specific project
-- It's a bug in one repository's code
+**File in the specific repository when:**
+- The issue affects only that repository.
+- It is a feature request or bug report scoped to one project.
 
 ---
 
-## When to Use This (And When NOT To)
+## Features
 
-### This framework is designed for:
-- **Medium-to-large organizations** (20+ repositories, 5+ teams)
-- **Complex coordination needs** across multiple teams and services
-- **Organizations committed to GitHub** as primary development platform
-- **Teams that need structured incident response** across services
-- **Engineering orgs wanting systematic cross-repo initiative tracking**
+### Logic-First Decision Framework
+All governance decisions are grounded in a five-level principle hierarchy with formal conflict resolution. No more "it depends" --- every conflict type has a documented resolution path. Sixteen principles, each with explicit logical derivation, cover the full spectrum from foundational transparency to operational security to community inclusivity.
 
-### You probably DON'T need this if:
-- **Small scale**: < 10 repositories or single team
-- **Simple coordination**: Slack messages and @mentions work fine
-- **Single product**: One team, one main repository
-- **Different tools**: Primary workflow is in Jira, ServiceNow, or PagerDuty
-- **Existing solution works**: If current process is effective, don't fix what isn't broken
+### Structured Issue Templates
+Form-based GitHub Issue templates with field validation, dropdown selections, and automatic label application. Three templates cover the primary cross-org coordination patterns: initiatives, incidents, and RFCs. Structured data entry reduces ambiguity and enables automation.
 
-### Simpler alternatives to consider:
-- **Small orgs**: Use basic GitHub issues with @mentions and milestones
-- **Single team**: Repository-level issue templates are sufficient
-- **Enterprise with existing tools**: ServiceNow, Jira, or Linear may be better integrated
-- **Incident management**: Dedicated tools like PagerDuty or Opsgenie for production incidents
+### Automated Cross-Repository Coordination
+GitHub Actions workflows detect organization-wide issues, add them to project boards, and notify affected repositories. The cross-repo notification system parses issue bodies for repository references and posts structured coordination comments with linking syntax.
 
-**Rule of thumb**: Start simple. Adopt this framework when coordination pain is felt, not preemptively.
+### Comprehensive Labeling System
+A four-category label taxonomy (Type, Priority, Status, Impact) provides consistent classification across the organization. Labels serve double duty as automation triggers and human-readable status indicators.
+
+### Six-Phase Implementation Roadmap
+From Foundation through Evolution, each phase has defined objectives, deliverables, success criteria, gate reviews, and named decision authorities. The roadmap includes a measurement framework with leading and lagging indicators, risk mitigation strategies, and a continuous improvement loop.
+
+### Conflict Resolution Protocols
+Seven conflict types with explicit resolution approaches. Standard resolution (90% of cases) applies the hierarchy directly. Complex escalation convenes a logic review, requires formal logical arguments from each position, and synthesizes a superior solution. All resolutions are documented as precedent.
+
+### Self-Critique and Audit Trail
+The repository includes a comprehensive critique document that identifies ten major blind spots, ten critical shatter points, and twenty actionable recommendations. This is governance that audits itself.
+
+### Scalability Guidance
+Explicit guidance on when this framework is appropriate (20+ repositories, 5+ teams, complex coordination needs) and when simpler alternatives suffice (single team, fewer than 10 repos, existing tools that work). Honest scoping prevents over-engineering.
 
 ---
 
-## 📝 Issue Templates
+## Cross-Organ Orchestration
 
-### Available Templates
+### The ORGAN System Context
 
-1. **Organization-Wide Issue** (`organization-wide-issue.yml`)
-   - For general issues affecting multiple repositories
-   - Includes severity classification and affected repository tracking
+Petasum Super Petasum operates within ORGAN-IV (Taxis), the orchestration and governance organ of an eight-organ creative-institutional system:
 
-2. **Security Concern** (`security-concern.yml`)
-   - For security issues affecting the organization
-   - Prioritized handling and severity tracking
+| Organ | Domain | GitHub Organization |
+|-------|--------|-------------------|
+| I | Theory (epistemology, recursion, ontology) | [organvm-i-theoria](https://github.com/organvm-i-theoria) |
+| II | Art (generative, performance, experiential) | [organvm-ii-poiesis](https://github.com/organvm-ii-poiesis) |
+| III | Commerce (SaaS, B2B, B2C products) | [organvm-iii-ergon](https://github.com/organvm-iii-ergon) |
+| IV | Orchestration (governance, routing) | [organvm-iv-taxis](https://github.com/organvm-iv-taxis) |
+| V | Public Process (essays, building in public) | [organvm-v-logos](https://github.com/organvm-v-logos) |
+| VI | Community (salons, reading groups) | [organvm-vi-koinonia](https://github.com/organvm-vi-koinonia) |
+| VII | Marketing (POSSE distribution, announcements) | [organvm-vii-kerygma](https://github.com/organvm-vii-kerygma) |
+| VIII | Meta (umbrella org) | [meta-organvm](https://github.com/meta-organvm) |
 
-3. **Process Improvement** (`process-improvement.yml`)
-   - For suggesting improvements to workflows and processes
-   - Includes impact analysis and implementation considerations
+### How Petasum Routes Between Organs
 
-### Using Templates in Other Repositories
+The ORGAN system enforces a no-back-edges dependency constraint: information flows I to II to III only; ORGAN-III cannot depend on ORGAN-II. Petasum operates at the orchestration layer (ORGAN-IV), which sits outside this linear dependency chain. It provides:
 
-To redirect users to this central repository from other repos, copy the template:
+- **Cross-organ issue tracking**: When a governance decision affects multiple organs (for example, a new licensing policy for ORGAN-III commercial repos that also applies to ORGAN-II creative repos), Petasum is where the issue lives.
+- **Conflict resolution across organ boundaries**: When ORGAN-I's theoretical principles collide with ORGAN-III's commercial constraints, the logic-first hierarchy provides a resolution framework that does not privilege either organ.
+- **Coordination without coupling**: Petasum enables organs to coordinate on shared concerns (security policies, naming conventions, CI/CD standards) without creating runtime dependencies between them.
+
+### Issue Flow Across Organs
+
 ```
-.github/ISSUE_TEMPLATE/redirect-to-org-repo.yml
-```
-
-This provides a clear path for users to file organization-wide issues in the correct location.
-
----
-
-## 🏷️ Labels
-
-The repository uses a comprehensive labeling system defined in [`.github/labels.yml`](.github/labels.yml):
-
-### Type Labels
-- `org-wide` - Issues affecting multiple repositories or the organization
-- `security` - Security-related concerns
-- `process` - Process and workflow improvements
-- `infrastructure` - Infrastructure and tooling issues
-- `documentation` - Documentation improvements
-- `dependency` - Dependency management issues
-
-### Priority Labels
-- `urgent` - Requires immediate attention
-- `high-priority` - High priority issue
-- `medium-priority` - Medium priority issue
-- `low-priority` - Low priority issue
-
-### Status Labels
-- `needs-triage` - Needs initial review
-- `in-progress` - Work is in progress
-- `blocked` - Progress is blocked
-- `waiting-feedback` - Waiting for feedback
-- `ready-to-implement` - Ready to implement
-
-### Impact Labels
-- `breaking-change` - Breaking change
-- `cross-repo` - Affects multiple repositories
-- `all-repos` - Affects all repositories
-
----
-
-## 🤖 Automation
-
-### Automated Workflows
-
-#### 1. Organization-Wide Issue Notifications
-**Trigger:** When an issue is labeled with `org-wide`
-
-**Actions:**
-- Posts a comment with priority and next steps
-- Generates a notification summary
-- Can integrate with GitHub Projects (when configured)
-
-**Workflow:** [`.github/workflows/org-issue-notifications.yml`](.github/workflows/org-issue-notifications.yml)
-
-#### 2. Cross-Repository Notifications
-**Trigger:** When an issue is labeled with `cross-repo` or `all-repos`
-
-**Actions:**
-- Parses issue body for repository references
-- Posts guidance for repository maintainers
-- Provides instructions for creating linked issues
-
-**Workflow:** [`.github/workflows/cross-repo-notifications.yml`](.github/workflows/cross-repo-notifications.yml)
-
----
-
-## 💬 Discussions
-
-For topics that don't require issue tracking, use **GitHub Discussions**:
-
-- **Organization Discussions**: [GitHub Organization Discussions](https://github.com/orgs/ivviiviivvi/discussions)
-- **Repository Discussions**: [Repository Discussions](../../discussions) (if enabled)
-
-### When to Use Discussions vs Issues
-
-| Use Discussions For | Use Issues For |
-|---------------------|----------------|
-| Questions and answers | Specific problems to solve |
-| Brainstorming ideas | Tracked work items |
-| General announcements | Bug reports |
-| Community feedback | Feature requests with clear scope |
-
----
-
-## 📊 GitHub Projects Integration
-
-Organization-wide issues can be tracked using **GitHub Projects**:
-
-### Setting Up a Project
-
-1. Create an organization-level project
-2. Add views for different teams or repositories
-3. Configure automation to add issues with specific labels
-4. Link to the project from relevant repositories
-
-### Recommended Project Views
-
-- **By Priority**: Group issues by priority labels
-- **By Repository**: Track which repositories are affected
-- **By Status**: Monitor progress of issues
-- **By Team**: Assign ownership to teams
-
----
-
-## 🔗 Linking Issues Across Repositories
-
-When an organization-wide issue affects specific repositories:
-
-### Create Linked Issues
-
-1. Create a new issue in the affected repository
-2. Reference this central issue:
-   ```markdown
-   Related to ivviiviivvi/petasum-super-petasum#<issue-number>
-   ```
-3. Update the central issue with a link to the repository-specific issue
-
-### Benefits of Linking
-
-- **Traceability**: Track impact across repositories
-- **Context**: Provide repository-specific context
-- **Notifications**: Keep stakeholders informed
-## 🛠️ Configuration for Repository Maintainers
-
-### Adding the Redirect Template to Your Repository
-
-Copy this file to your repository:
-```bash
-curl -o .github/ISSUE_TEMPLATE/redirect-to-org-repo.yml \
-  https://raw.githubusercontent.com/ivviiviivvi/petasum-super-petasum/main/.github/ISSUE_TEMPLATE/redirect-to-org-repo.yml
+ORGAN-I discovers a dependency conflict
+        |
+        v
+Files issue in petasum-super-petasum (org-wide template)
+        |
+        v
+Workflow adds to ORGAN-IV project board
+        |
+        v
+Cross-repo notification identifies affected ORGAN-II and ORGAN-III repos
+        |
+        v
+Maintainers in each organ create linked issues in their repos
+        |
+        v
+Resolution coordinated via central Petasum issue
+        |
+        v
+Decision documented with logical reasoning chain
 ```
 
-Or manually copy [redirect-to-org-repo.yml](.github/ISSUE_TEMPLATE/redirect-to-org-repo.yml) to your repository's `.github/ISSUE_TEMPLATE/` directory.
+---
+
+## Governance Model
+
+### Decision Authority
+
+Petasum defines explicit decision authorities for each lifecycle phase:
+
+- **Phase 0 (Foundation)**: Executive Leadership Team or designated Project Sponsor
+- **Phase 1 (Awareness)**: Program Manager + Steering Committee
+- **Phase 2 (Adoption)**: Program Manager + Pilot Team Leads
+- **Phase 3 (Integration)**: Steering Committee + Organization Leadership
+- **Phase 4 (Maturation)**: Governance Council + Executive Sponsor
+
+Each gate review requires a written rationale for the go/no-go decision. This prevents governance by inertia.
+
+### Escalation Protocols
+
+**Standard Resolution** (90% of conflicts): Apply the principle hierarchy. If the conflict is between different levels, the higher level prevails. If same level, analyze which position better serves the higher-level principle. Document reasoning.
+
+**Complex Escalation** (10% of conflicts): Convene a logic review with affected stakeholders. Each position must present a formal logical case. Collaboratively identify fallacies, contradictions, and gaps. Seek a synthesized solution that transcends the initial positions. If synthesis fails, return to Level 0 (Logic prevails). Update the framework if new insights emerge.
+
+### Discourse Standards
+
+All organizational discussions under the Petasum framework require:
+
+- Clear logical reasoning, not assertion
+- Explicit identification of assumptions
+- Welcoming logical critique as a feature, not a threat
+- Updating views when logic demands it
+- Acknowledging "I don't know" when appropriate
+
+Prohibited: arguments from authority without reasoning, emotional manipulation, personal attacks, intentional ambiguity, refusal to engage with logical criticism.
 
 ---
 
-## 📚 Best Practices
+## Relationship to Agentic Titan
 
-### For Issue Reporters
+[Agentic Titan](https://github.com/organvm-iv-taxis/agentic-titan) is the flagship repository of ORGAN-IV. Where Agentic Titan provides the runtime orchestration layer --- AI agent coordination, task routing, and execution management --- Petasum Super Petasum provides the governance substrate on which that orchestration operates.
 
-1. **Search First**: Check if a similar issue already exists
-2. **Use Templates**: Fill out all required fields in issue templates
-3. **Be Specific**: Clearly identify affected repositories and teams
-4. **Provide Context**: Include relevant links, examples, and impact
-5. **Follow Up**: Respond to questions and update the issue as needed
+The relationship is complementary:
 
-### For Issue Triagers
+| Dimension | Agentic Titan | Petasum Super Petasum |
+|-----------|--------------|----------------------|
+| **Scope** | Runtime agent orchestration | Governance and decision frameworks |
+| **Artifacts** | Code, APIs, agent configurations | Templates, workflows, policy documents |
+| **Decisions** | Which agent handles which task | Which principle prevails in a conflict |
+| **Time horizon** | Milliseconds to minutes | Weeks to years |
+| **Users** | AI agents and their operators | Humans making organizational decisions |
 
-1. **Timely Triage**: Review new issues within 24-48 hours
-2. **Apply Labels**: Use appropriate labels for categorization
-3. **Assign Ownership**: Tag relevant teams or individuals
-4. **Link Issues**: Create links to repository-specific issues
-5. **Update Status**: Keep status labels current
-
-### For Repository Maintainers
-
-1. **Monitor Central Repo**: Watch this repository for relevant issues
-2. **Create Links**: Link repository-specific issues to central issues
-3. **Provide Updates**: Share progress on your repository's work
-4. **Close When Done**: Update central issue when resolved in your repo
+Petasum defines the principles; Agentic Titan operationalizes them. If Agentic Titan is the nervous system, Petasum is the constitution.
 
 ---
 
-## 🤝 Contributing
+## Repository Structure
 
-This repository accepts contributions to improve the infrastructure:
-
-- **Improve Templates**: Suggest improvements to issue templates
-- **Enhance Workflows**: Propose automation improvements
-- **Update Documentation**: Keep documentation current
-- **Share Feedback**: Provide feedback on the process
-
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for contribution guidelines.
-
----
-
-## 📞 Support
-
-Need help with organization-wide issue tracking?
-
-- **Documentation**: Read this README and related docs
-- **Discussions**: Ask in [Organization Discussions](https://github.com/orgs/ivviiviivvi/discussions)
-- **Issues**: File an issue in this repository
-- **Contact**: Reach out to organization administrators
-
----
-
-## Reference
-
-This repository implements comprehensive patterns for organization-wide GitHub management. For detailed guidance, see:
-
-### Framework Documentation
-
-- **[LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md)** - Complete philosophical and practical guide
-- **[PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md)** - Hierarchy and conflict resolution
-- **[COMMANDMENTS.md](COMMANDMENTS.md)** - 16 principles with logical derivations
-- **[LIFECYCLE_ROADMAP.md](LIFECYCLE_ROADMAP.md)** - Implementation and evolution roadmap
-- **[SETUP.md](SETUP.md)** - Technical setup with logic-first decision examples
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute with logical reasoning
-
-### Quick Start Guides
-
-- [QUICK_START.md](.github/QUICK_START.md) - Quick start guide
-- [DISCUSSIONS.md](.github/DISCUSSIONS.md) - Discussion setup
-- [PROJECTS.md](.github/PROJECTS.md) - Project configuration
-
-### Implementation Guidance
-
-This repository implements organization-wide issue tracking with a logic-first approach. The `copilot-chat-response-transcript` file provides comprehensive guidance on organization-wide GitHub issue management.
-
-**For implementing the logic-first framework in your organization**, see [LIFECYCLE_ROADMAP.md](LIFECYCLE_ROADMAP.md) for:
-- 6-phase implementation plan (Foundation → Evolution)
-- Measurement frameworks and success criteria
-- Risk mitigation strategies
-- Continuous improvement loops
+```
+petasum-super-petasum/
+├── .github/
+│   ├── CODEOWNERS                           # Repository ownership
+│   ├── CONTRIBUTING.md                      # Contribution guidelines
+│   ├── DISCUSSIONS.md                       # Discussion setup guide
+│   ├── DISCUSSION_TEMPLATE/
+│   │   └── org-proposal.yml                 # Proposal discussion template
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── annual-principles-audit.yml      # Annual governance review
+│   │   ├── config.yml                       # Template chooser config
+│   │   ├── org-incident.yml                 # Multi-service incident
+│   │   ├── org-rfc.yml                      # Cross-repo RFC
+│   │   ├── org-wide-initiative.yml          # Cross-repo initiative
+│   │   ├── organization-wide-issue.yml      # General org-wide issue
+│   │   ├── process-improvement.yml          # Process improvement
+│   │   ├── redirect-to-org-repo.yml         # Redirect for other repos
+│   │   └── security-concern.yml             # Security issues
+│   ├── PROJECTS.md                          # Project configuration guide
+│   ├── QUICK_START.md                       # Quick start guide
+│   ├── REDIRECT_TEMPLATE_USAGE.md           # Redirect template docs
+│   ├── labels.yml                           # Label definitions
+│   └── workflows/
+│       ├── add-to-org-project.yml           # Auto-add to project board
+│       ├── cross-repo-notifications.yml     # Cross-repo coordination
+│       └── org-issue-notifications.yml      # Org-wide notifications
+├── docs/
+│   ├── QUICK_REFERENCE.md                   # Daily reference guide
+│   ├── STRUCTURE.md                         # Repo structure docs
+│   └── examples/
+│       └── README.md                        # Usage examples
+├── CHANGELOG.md                             # Version history
+├── COMMANDMENTS.md                          # 16 principles + derivations
+├── COMPREHENSIVE_CRITIQUE.md                # Self-assessment and audit
+├── CONTRIBUTING.md                          # How to contribute
+├── IMPLEMENTATION_CHECKLIST.md              # Lifecycle tracking
+├── LICENSE                                  # MIT License
+├── LIFECYCLE_ROADMAP.md                     # Six-phase implementation plan
+├── LOGIC_FRAMEWORK.md                       # Philosophical foundation
+├── PRINCIPLE_CONFLICTS.md                   # Conflict resolution matrix
+├── README.md                                # This document
+├── SECURITY.md                              # Security policies
+└── SETUP.md                                 # Technical setup guide
+```
 
 ---
 
-## 📜 License
+## Lifecycle and Roadmap
 
-See [LICENSE](LICENSE) for details.
+### Current Status
+
+Petasum is at **v1.0.0** with all core documentation complete. The logic-first framework documents (LOGIC_FRAMEWORK, COMMANDMENTS, PRINCIPLE_CONFLICTS, LIFECYCLE_ROADMAP) are stable and ready for organizational adoption. Several governance documents identified in the implementation checklist (GOVERNANCE.md, ESCALATION_GUIDE.md, METRICS.md) remain to be created.
+
+### Implementation Phases
+
+| Phase | Timeline | Focus | Gate Criteria |
+|-------|----------|-------|--------------|
+| **0: Foundation** | Weeks 1--2 | Core docs, leadership alignment, champion training | All docs complete, leadership go-ahead |
+| **1: Awareness** | Weeks 3--4 | Organization-wide introduction, learning resources | 90% awareness, 50% understanding |
+| **2: Adoption** | Weeks 5--8 | Pilot teams, process integration, tooling | Pilots effective, challenges solvable |
+| **3: Integration** | Weeks 9--16 | Org-wide rollout, workflow embedding, culture | 50%+ unprompted framework use |
+| **4: Maturation** | Months 5--12 | Optimization, edge case mastery, institutionalization | Self-sustaining, governance board |
+| **5: Evolution** | Year 2+ | Center of excellence, research, ecosystem | External recognition, AI integration |
+
+### Measurement Framework
+
+**Adoption metrics**: Weekly active users (target >80%), decisions documented with reasoning (target >70%), meetings using logical structure (target >60%).
+
+**Quality metrics**: Decision reversal rate (target <10% from baseline), conflicts resolved via framework (target >80%), logical fallacies in documentation (target <5%).
+
+**Impact metrics**: Employee satisfaction (+15% from baseline), time-to-decision for complex decisions (-25%), customer satisfaction (+10%).
+
+---
+
+## Related Work
+
+Petasum's governance model draws from and extends several established frameworks:
+
+- **[Semgrep Philosophy](https://semgrep.dev/docs/contributing/semgrep-philosophy)** --- Source of principles around open source, privacy-first, determinism, safe execution, and performance. Restructured through the logic-first hierarchy.
+- **[TensorFlow Contributing Guidelines](https://github.com/tensorflow/tensorflow/blob/master/CONTRIBUTING.md)** --- Source of quality-over-quantity, community collaboration, transparency, and backward compatibility principles.
+- **[Schema.org Community Guidelines](https://github.com/schemaorg/schemaorg)** --- Source of interoperability, clarity, inclusivity, and stability principles.
+
+The logic-first meta-principle itself is informed by classical logic (Aristotle's three laws), modal and temporal logic traditions, and Godel's incompleteness theorems as a check on framework hubris.
+
+---
+
+## Contributing
+
+Contributions are welcome, but all proposed changes must pass logical scrutiny.
+
+### How to Contribute
+
+1. **Read the framework**: Understand [LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md) and [COMMANDMENTS.md](COMMANDMENTS.md) before proposing changes.
+2. **Open a discussion or RFC**: For significant changes, use the RFC issue template or start a Discussion.
+3. **Include logical reasoning**: Every proposal must include its logical derivation and demonstrate consistency with the Level 0 meta-principle.
+4. **Challenge inconsistencies**: If you find a logical error in any document, you are obligated to point it out. We are obligated to correct it.
+
+### What You Can Improve
+
+- **Templates**: Suggest improvements to issue templates (field clarity, validation rules, new template types).
+- **Workflows**: Propose automation improvements or new workflow patterns.
+- **Documentation**: Keep documentation current, fix errors, improve clarity.
+- **Framework**: Propose new principles (with logical derivation), refine conflict resolution protocols, or challenge existing principles.
+- **Tooling**: Build or improve logic-supporting tools (fallacy detection, decision tree generators, conflict resolution wizards).
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full contribution guidelines.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+The MIT License was chosen because open source enables verification (Level 3 Community Principle: Free and Open Source), and verification is a logical necessity for validating correctness. Closed systems cannot be independently verified; verification is required for logical confidence.
+
+---
+
+## Author
+
+**[@4444j99](https://github.com/4444j99)**
+
+Part of the [ORGAN-IV: Taxis](https://github.com/organvm-iv-taxis) orchestration organ within the [ORGAN system](https://github.com/meta-organvm) --- an eight-organ creative-institutional architecture coordinating theory, art, commerce, orchestration, public process, community, marketing, and meta-governance across distributed GitHub organizations.
