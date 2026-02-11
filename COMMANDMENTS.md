@@ -1,8 +1,19 @@
 # Organization Commandments
+<a id="top"></a>
 
 This document outlines the core principles and commandments that guide our organization-wide issue tracking and project management practices. These principles are inspired by best practices from leading open-source projects including Semgrep, TensorFlow, and Schema.org.
 
 **All principles herein are derived from and subordinate to the meta-principle of logical consistency.** See [PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md) for the complete logic-first framework.
+
+## Table of Contents
+1. [Meta-Principle (Level 0)](#meta-principle-level-0)
+2. [Core Principles](#core-principles)
+3. [Application to Organization-Wide Issue Tracking](#application-to-organization-wide-issue-tracking)
+4. [Contributing to These Principles](#contributing-to-these-principles)
+5. [Logical Framework Reference](#logical-framework-reference)
+6. [Original Inspiration Sources](#original-inspiration-sources)
+
+---
 
 ## Meta-Principle (Level 0)
 
@@ -13,6 +24,10 @@ This document outlines the core principles and commandments that guide our organ
 - When principles conflict, logical analysis determines resolution
 - Contradictions are impermissible and must be resolved
 - All principles below are valid insofar as they serve logical coherence
+
+[Back to Top](#top)
+
+---
 
 ## Core Principles
 
@@ -153,6 +168,10 @@ This document outlines the core principles and commandments that guide our organ
 - Version major changes appropriately
 - **Logic**: Unstable systems prevent long-term logical planning; stability enables logical prediction
 
+[Back to Top](#top)
+
+---
+
 ## Application to Organization-Wide Issue Tracking
 
 These commandments apply to our organization-wide issue tracking practices in the following ways:
@@ -177,6 +196,10 @@ These commandments apply to our organization-wide issue tracking practices in th
 - **Quality**: Focus on high-impact organizational initiatives
 - **Backward Compatibility**: Maintain existing processes while improving
 
+[Back to Top](#top)
+
+---
+
 ## Contributing to These Principles
 
 These commandments are living guidelines, **but all changes must pass logical scrutiny**. As our organization evolves, we should:
@@ -190,11 +213,19 @@ These commandments are living guidelines, **but all changes must pass logical sc
 
 **Key requirement**: Any proposed principle must include its logical derivation and demonstrate consistency with the Level 0 meta-principle of logic.
 
+[Back to Top](#top)
+
+---
+
 ## Logical Framework Reference
 
 For detailed information on conflict resolution and the logic-first hierarchy:
 - See [PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md) for complete logical framework
 - See [LOGIC_FRAMEWORK.md](LOGIC_FRAMEWORK.md) for philosophical and practical foundations
+
+[Back to Top](#top)
+
+---
 
 ## Original Inspiration Sources
 
@@ -202,6 +233,8 @@ These principles were inspired by (but logically analyzed and reorganized):
 - [Semgrep Philosophy](https://semgrep.dev/docs/contributing/semgrep-philosophy)
 - [TensorFlow Contributing Guidelines](https://github.com/tensorflow/tensorflow/blob/master/CONTRIBUTING.md)
 - [Schema.org Community Guidelines](https://github.com/schemaorg/schemaorg)
+
+[Back to Top](#top)
 
 ---
 
