@@ -1,0 +1,4 @@
+## 2024-03-25 - GitHub Actions Script Injection
+**Vulnerability:** User input (issue labels) was interpolated directly into JavaScript code within an `actions/github-script` step using `${{ ... }}` syntax. This allows attackers to inject arbitrary JavaScript code by creating labels with malicious payloads (e.g., closing the string and executing code).
+**Learning:** `actions/github-script` executes the provided script string *after* the GitHub Actions runner performs macro substitution on `${{ ... }}` expressions. If user input is substituted directly, it bypasses the script's syntax boundaries.
+**Prevention:** Avoid interpolating user input directly into the script string. Instead, access the data securely using the `context` object (e.g., `context.payload.issue.labels`) or pass it via environment variables if necessary (using `process.env`).
