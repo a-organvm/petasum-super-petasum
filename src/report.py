@@ -26,7 +26,7 @@ def generate_system_report(
     if tracker.pending:
         lines.append("### Pending Obligations")
         for ob in tracker.pending:
-            lines.append(f"- [{ob.obligation_type}] {ob.source_organ} → {ob.target_organ}: {ob.description}")
+            lines.append(f"- [{ob.obligation_type}] {ob.source_organ} \u2192 {ob.target_organ}: {ob.description}")
         lines.append("")
 
     # Governance health
@@ -41,8 +41,7 @@ def generate_system_report(
                 lines.append(f"- {check.name}: {check.message}")
         lines.append("")
 
-    return "
-".join(lines)
+    return "\n".join(lines)
 
 
 def generate_organ_report(
@@ -63,8 +62,7 @@ def generate_organ_report(
     passed = sum(1 for c in organ_checks if c.passed)
     lines.append(f"## Health Checks ({passed}/{len(organ_checks)} passing)")
     for check in organ_checks:
-        mark = "✓" if check.passed else "✗"
+        mark = "\u2713" if check.passed else "\u2717"
         lines.append(f"- {mark} {check.message}")
 
-    return "
-".join(lines)
+    return "\n".join(lines)
