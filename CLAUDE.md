@@ -77,3 +77,22 @@ It belongs to **ORGAN IV (Orchestration)** under the `organvm-iv-taxis` GitHub o
 
 **Registry:** [`registry-v2.json`](https://github.com/meta-organvm/organvm-corpvs-testamentvm/blob/main/registry-v2.json)
 **Corpus:** [`organvm-corpvs-testamentvm`](https://github.com/meta-organvm/organvm-corpvs-testamentvm)
+
+<!-- ORGANVM:AUTO:START -->
+## System Context (auto-generated — do not edit)
+
+**Organ:** ORGAN-IV (Orchestration) | **Tier:** standard | **Status:** LOCAL
+**Org:** `unknown` | **Repo:** `petasum-super-petasum`
+
+### Edges
+- **Produces** → `unknown`: unknown
+- **Consumes** ← `META-ORGANVM`: unknown
+
+### Siblings in Orchestration
+`orchestration-start-here`, `universal-node-network`, `.github`, `agentic-titan`, `agent--claude-smith`, `a-i--skills`
+
+### Governance
+- *Standard ORGANVM governance applies*
+
+*Last synced: 2026-02-24T01:01:15Z*
+<!-- ORGANVM:AUTO:END -->
