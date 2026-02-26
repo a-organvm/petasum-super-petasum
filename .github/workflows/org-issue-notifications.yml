@@ -13,51 +13,32 @@ jobs:
     if: contains(github.event.issue.labels.*.name, 'org-wide')
 
     steps:
-      - name: Check if this is an org-wide issue
-        id: check_labels
-        run: |
-          echo "Issue has org-wide label"
-
-env:
-  ISSUE_TITLE: ${{ github.event.issue.title }}
-  ISSUE_NUMBER: ${{ github.event.issue.number }}
-  ISSUE_URL: ${{ github.event.issue.html_url }}
-  ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-run: |
-  echo "issue_number=${ISSUE_NUMBER}" >> $GITHUB_OUTPUT
-  echo "issue_title=${ISSUE_TITLE}" >> $GITHUB_OUTPUT
-  echo "issue_url=${ISSUE_URL}" >> $GITHUB_OUTPUT
-  echo "issue_author=${ISSUE_AUTHOR}" >> $GITHUB_OUTPUT
-          echo "issue_author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
-
-      - name: Determine severity and urgency
-        id: categorize
-        run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
-          echo "labels=$LABELS"
-
-          if echo "$LABELS" | grep -q "urgent\|critical"; then
-            echo "priority=urgent" >> $GITHUB_OUTPUT
-            echo "emoji=🚨" >> $GITHUB_OUTPUT
-          elif echo "$LABELS" | grep -q "high-priority\|security"; then
-            echo "priority=high" >> $GITHUB_OUTPUT
-            echo "emoji=⚠️" >> $GITHUB_OUTPUT
-          else
-            echo "priority=normal" >> $GITHUB_OUTPUT
-            echo "emoji=📢" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Post comment with notification info
+      - name: Process notification and post comment
+        id: notify
         uses: actions/github-script@v7
         with:
           script: |
-            const priority = '${{ steps.categorize.outputs.priority }}';
-            const emoji = '${{ steps.categorize.outputs.emoji }}';
+            const labels = context.payload.issue.labels.map(l => l.name);
+            let priority = 'normal';
+            let emoji = '📢';
 
+            // Determine priority based on labels
+            if (labels.some(l => l.includes('urgent') || l.includes('critical'))) {
+              priority = 'urgent';
+              emoji = '🚨';
+            } else if (labels.some(l => l.includes('high-priority') || l.includes('security'))) {
+              priority = 'high';
+              emoji = '⚠️';
+            }
+
+            // Set outputs for subsequent steps
+            core.setOutput('priority', priority);
+
+            // Construct message
             let message = `${emoji} **Organization-Wide Issue Alert**\n\n`;
             message += `This issue has been tagged as organization-wide and will be tracked centrally.\n\n`;
             message += `**Priority:** ${priority}\n`;
-            message += `**Labels:** ${{ join(github.event.issue.labels.*.name, ', ') }}\n\n`;
+            message += `**Labels:** ${labels.join(', ')}\n\n`;
 
             if (priority === 'urgent') {
               message += `⚠️ This is marked as **URGENT** and requires immediate attention from relevant teams.\n\n`;
@@ -90,10 +71,10 @@ run: |
       - name: Create notification summary
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_AUTHOR: ${{ steps.issue_details.outputs.issue_author }}
-          ISSUE_NUMBER: ${{ steps.issue_details.outputs.issue_number }}
-          ISSUE_URL: ${{ steps.issue_details.outputs.issue_url }}
-          PRIORITY: ${{ steps.categorize.outputs.priority }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          PRIORITY: ${{ steps.notify.outputs.priority }}
           LABELS: ${{ join(github.event.issue.labels.*.name, ', ') }}
         run: |
           echo "## 📢 Organization-Wide Issue Notification" >> $GITHUB_STEP_SUMMARY
