@@ -1,5 +1,7 @@
 # Organization Commandments
 
+<a id="top"></a>
+
 This document outlines the core principles and commandments that guide our organization-wide issue tracking and project management practices. These principles are inspired by best practices from leading open-source projects including Semgrep, TensorFlow, and Schema.org.
 
 **All principles herein are derived from and subordinate to the meta-principle of logical consistency.** See [PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md) for the complete logic-first framework.
@@ -202,6 +204,8 @@ These principles were inspired by (but logically analyzed and reorganized):
 - [Semgrep Philosophy](https://semgrep.dev/docs/contributing/semgrep-philosophy)
 - [TensorFlow Contributing Guidelines](https://github.com/tensorflow/tensorflow/blob/master/CONTRIBUTING.md)
 - [Schema.org Community Guidelines](https://github.com/schemaorg/schemaorg)
+
+[Back to Top](#top)
 
 ---
 
