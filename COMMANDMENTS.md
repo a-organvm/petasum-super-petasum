@@ -153,6 +153,26 @@ This document outlines the core principles and commandments that guide our organ
 - Version major changes appropriately
 - **Logic**: Unstable systems prevent long-term logical planning; stability enables logical prediction
 
+### From Incident Lessons
+*(Classified as Level 2 based on logical derivation)*
+
+#### 17. Non-Destructive Autonomy (Level 2: Operational Principle)
+**Logical Derivation**: Irreversible actions by autonomous agents violate predictability;
+recoverability is a logical prerequisite for safe autonomy.
+
+- Autonomous agents MUST NOT permanently delete files; use archival (`mv` to `.archive/`)
+  or soft-delete (`trash`) instead of `rm`
+- Files not tracked by version control require CRITICAL-level approval before any
+  destructive operation
+- Cleanup phases in agent plans MUST enumerate target files explicitly and await
+  human confirmation before proceeding
+- Audit logging of destructive operations MUST have a local fallback when the
+  primary audit store is unavailable
+- Source materials, prototypes, and design artifacts are classified as protected
+  and require elevated permissions to modify or remove
+- **Logic**: Permanent deletion creates irreversible state loss; logical systems
+  require recoverability for error correction
+
 ## Application to Organization-Wide Issue Tracking
 
 These commandments apply to our organization-wide issue tracking practices in the following ways:
