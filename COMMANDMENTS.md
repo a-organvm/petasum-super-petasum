@@ -1,5 +1,13 @@
 # Organization Commandments
 
+> *We will be at the forefront of society, guiding the automated world's businesses and workforce away from collapse or stagnation — towards ethical and meaningful solutions that facilitate the rapid evolution of advanced empowerment for both employers and employees — in the workforce and the lifeforce.*
+>
+> — ORGANVM North Star (see `meta-organvm/VISION.md`)
+
+These commandments exist to make that vision enforceable. The principles below govern how we build, ship, and maintain — ensuring that automation amplifies human capability rather than eroding it, and that a system of 105 repositories remains coherent enough for one person to operate at institutional scale.
+
+---
+
 This document outlines the core principles and commandments that guide our organization-wide issue tracking and project management practices. These principles are inspired by best practices from leading open-source projects including Semgrep, TensorFlow, and Schema.org.
 
 **All principles herein are derived from and subordinate to the meta-principle of logical consistency.** See [PRINCIPLE_CONFLICTS.md](PRINCIPLE_CONFLICTS.md) for the complete logic-first framework.
@@ -172,6 +180,28 @@ recoverability is a logical prerequisite for safe autonomy.
   and require elevated permissions to modify or remove
 - **Logic**: Permanent deletion creates irreversible state loss; logical systems
   require recoverability for error correction
+
+#### 18. Bounded Autonomous Execution (Level 2: Operational Principle)
+**Logical Derivation**: Unbounded autonomy in non-interactive agents violates predictability;
+scope limits and rollback triggers are logical prerequisites for safe unattended operation.
+
+- Non-interactive agents (background, scheduled, auto-sync) MUST declare a single-repo
+  scope at session start; cross-repo writes are forbidden within a single session
+- A mandatory dry-run pass MUST precede any write operations in non-interactive mode;
+  the dry-run output is logged and diffed against the live run
+- Token budget and wall-clock timeout MUST be declared at session start; exceeding
+  either triggers immediate rollback of uncommitted changes
+- Automatic rollback is triggered by: (1) git merge conflict, (2) CI failure on
+  committed changes, (3) file write outside declared scope, (4) budget exceeded,
+  (5) unhandled exception, (6) session timeout
+- Cross-organ impulses discovered during execution MUST be captured as GitHub issues
+  in the target repo, not acted upon directly
+- Every non-interactive session MUST produce an audit record: session ID, agent name,
+  repo path, start/end timestamps, files read, files written, rollback events
+- See `docs/NON-INTERACTIVE-AGENT-SAFETY.md` for the full safety protocol and
+  `agent--claude-smith` ScopeValidator (F-35) for code-level enforcement
+- **Logic**: Unbounded agents create unpredictable state mutations; logical systems
+  require bounded execution contexts for verifiable outcomes
 
 ## Application to Organization-Wide Issue Tracking
 
