@@ -1,0 +1,8 @@
+schema_version: '1.0'
+repo: petasum-super-petasum
+organ: IV
+display_name: Organization-wide issue tracking with logic-first governance framework
+  and conflict resolution
+delivery:
+- platform: web_app
+  status: not_started
