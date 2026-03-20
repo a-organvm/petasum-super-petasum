@@ -33,5 +33,10 @@ jobs:
         continue-on-error: true
         run: ruff check --output-format=github .
 
+      - name: Type check with pyright
+        run: |
+          pip install pyright
+          pyright src/
+
       - name: Test with pytest
         run: pytest --cov=src --cov-report=term -v || echo "::warning::pytest failed"
