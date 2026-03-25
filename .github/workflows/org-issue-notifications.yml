@@ -15,8 +15,9 @@ jobs:
     steps:
       - name: Classify issue priority
         id: categorize
+        env:
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          LABELS="${{ join(github.event.issue.labels.*.name, ',') }}"
           echo "labels=${LABELS}" >> "$GITHUB_OUTPUT"
           if echo "$LABELS" | grep -Eq "urgent|critical"; then
             echo "priority=urgent" >> "$GITHUB_OUTPUT"
@@ -31,11 +32,15 @@ jobs:
 
       - name: Comment notification summary
         uses: actions/github-script@v7
+        env:
+          PRIORITY: ${{ steps.categorize.outputs.priority }}
+          EMOJI: ${{ steps.categorize.outputs.emoji }}
+          ISSUE_LABELS: ${{ steps.categorize.outputs.labels }}
         with:
           script: |
-            const priority = '${{ steps.categorize.outputs.priority }}';
-            const emoji = '${{ steps.categorize.outputs.emoji }}';
-            const labels = '${{ steps.categorize.outputs.labels }}';
+            const priority = process.env.PRIORITY;
+            const emoji = process.env.EMOJI;
+            const labels = process.env.ISSUE_LABELS;
             const body = [
               `${emoji} **Organization-Wide Issue Alert**`,
               '',
