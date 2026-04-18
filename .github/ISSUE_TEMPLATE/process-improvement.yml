@@ -8,6 +8,8 @@ body:
       value: |
         Use this template to suggest improvements to processes, workflows, or practices that affect the entire organization.
 
+        **Note:** We encourage using the [Logic-First Framework](LOGIC_FRAMEWORK.md) to explain your reasoning, as it helps us evaluate suggestions faster.
+
   - type: textarea
     id: current-process
     attributes:
@@ -25,6 +27,18 @@ body:
       placeholder: What's not working well?
     validations:
       required: true
+
+  - type: textarea
+    id: logical-analysis
+    attributes:
+      label: Logical Analysis (Optional)
+      description: |
+        If helpful, explain your reasoning using the [Logic-First Framework](LOGIC_FRAMEWORK.md).
+      placeholder: |
+        Premise: ...
+        Conclusion: ...
+    validations:
+      required: false
 
   - type: textarea
     id: proposed-improvement
