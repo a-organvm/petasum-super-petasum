@@ -1,3 +1,4 @@
+---
 name: Process Improvement
 description: Suggest improvements to organization-wide processes or workflows
 title: "[PROCESS] "
@@ -6,14 +7,21 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this template to suggest improvements to processes, workflows, or practices that affect the entire organization.
+        ### 👋 Help us improve!
+
+        Thank you for taking the time to suggest an improvement. We value your
+        feedback on our processes. Please provide as much detail as possible to
+        help us understand the context and the solution.
 
   - type: textarea
     id: current-process
     attributes:
       label: Current Process
-      description: Describe the current process or workflow
-      placeholder: How do things work now?
+      description: Describe the current process or workflow context.
+      placeholder: |
+        1. First we do X...
+        2. Then we do Y...
+        3. Finally Z happens.
     validations:
       required: true
 
@@ -21,8 +29,10 @@ body:
     id: problems
     attributes:
       label: Problems with Current Process
-      description: What issues or inefficiencies exist with the current approach?
-      placeholder: What's not working well?
+      description: What specific pain points, inefficiencies, or blockers exist?
+      placeholder: >
+        e.g., The manual step in step 2 causes a 2-day delay and is prone to
+        errors.
     validations:
       required: true
 
@@ -30,8 +40,8 @@ body:
     id: proposed-improvement
     attributes:
       label: Proposed Improvement
-      description: Describe your suggested improvement
-      placeholder: What should we do instead?
+      description: Describe your suggested solution clearly.
+      placeholder: "We should automate step 2 using..."
     validations:
       required: true
 
@@ -39,8 +49,9 @@ body:
     id: benefits
     attributes:
       label: Expected Benefits
-      description: What benefits would this improvement provide?
-      placeholder: How would this help?
+      description: How will this improvement help the organization?
+      placeholder: >
+        e.g., Reduces turnaround time by 50%, eliminates manual error risk.
 
   - type: checkboxes
     id: affected-areas
@@ -55,13 +66,15 @@ body:
         - label: Testing
         - label: Deployment
         - label: Communication
+        - label: Governance & Compliance
 
   - type: textarea
     id: implementation
     attributes:
       label: Implementation Considerations
-      description: What should be considered when implementing this improvement?
-      placeholder: What needs to be thought about?
+      description: >
+        Any dependencies, risks, or rollout steps we should know about?
+      placeholder: "Requires updates to CI secrets, needs team training, etc."
 
   - type: input
     id: affected-teams
@@ -69,3 +82,11 @@ body:
       label: Affected Teams
       description: Which teams would be impacted by this change?
       placeholder: "e.g., All teams, Backend, Frontend"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched for existing issues to avoid duplicates
+          required: true
