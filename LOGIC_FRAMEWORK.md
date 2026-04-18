@@ -45,6 +45,8 @@ Organizations that embrace logical primacy gain:
 4. **Effective Communication**: Shared language of rational discourse
 5. **Continuous Improvement**: Ability to challenge and refine any practice through logic
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## What is Logic?
@@ -170,6 +172,8 @@ Example:
    - ✗ "This approach is best because it's the optimal solution"
    - ✓ "This approach is best because it minimizes latency and maximizes throughput"
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## The Logic-First Philosophy
@@ -240,6 +244,8 @@ In all discussions and decisions:
 - Personal attacks
 - Intentional ambiguity
 - Refusing to engage with logical criticism
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -330,6 +336,8 @@ Measure:
 
 Conclusion: Logical structure improves efficiency (empirically verified)
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -435,6 +443,8 @@ All perspectives can be:
 
 Logic doesn't privilege one culture, person, or tradition—it's the universal tool for evaluating ANY claim from ANY source.
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## Advanced Topics
@@ -512,6 +522,8 @@ Example:
 **Implication**: Logical humility is logically required. We cannot have a complete, self-proving system.
 
 **Response**: Accept fundamental uncertainty while still using logic as our best tool.
+
+[Back to Top](#table-of-contents)
 
 ---
 
