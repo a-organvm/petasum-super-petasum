@@ -25,6 +25,8 @@ Consider:
 
 **There is no escape from logic. The only question is whether we use it well or poorly.**
 
+[Back to Top](#table-of-contents)
+
 ### The Cost of Illogic
 
 Organizations that don't prioritize logical consistency suffer from:
@@ -44,6 +46,8 @@ Organizations that embrace logical primacy gain:
 3. **Sustainable Growth**: Long-term planning based on logical projections
 4. **Effective Communication**: Shared language of rational discourse
 5. **Continuous Improvement**: Ability to challenge and refine any practice through logic
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -170,6 +174,8 @@ Example:
    - ✗ "This approach is best because it's the optimal solution"
    - ✓ "This approach is best because it minimizes latency and maximizes throughput"
 
+[Back to Top](#table-of-contents)
+
 ---
 
 ## The Logic-First Philosophy
@@ -240,6 +246,8 @@ In all discussions and decisions:
 - Personal attacks
 - Intentional ambiguity
 - Refusing to engage with logical criticism
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -330,6 +338,8 @@ Measure:
 
 Conclusion: Logical structure improves efficiency (empirically verified)
 ```
+
+[Back to Top](#table-of-contents)
 
 ---
 
@@ -434,6 +444,8 @@ All perspectives can be:
 4. Compared for logical strength
 
 Logic doesn't privilege one culture, person, or tradition—it's the universal tool for evaluating ANY claim from ANY source.
+
+[Back to Top](#table-of-contents)
 
 ---
 
