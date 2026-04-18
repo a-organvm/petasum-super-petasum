@@ -3,6 +3,19 @@ description: Propose a cross-repo change for review.
 title: "[RFC] <short title>"
 labels: [org-wide, rfc, needs-triage]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Logic-First RFC
+
+        This RFC follows the **Logic-First Framework**. Please refer to `LOGIC_FRAMEWORK.md` in the repository root for guidance on constructing valid arguments.
+
+        **The Logical Method:**
+        1. State the Question
+        2. Identify Premises (Facts & Assumptions)
+        3. Apply Reasoning
+        4. Derive Conclusion
+
   - type: textarea
     id: summary
     attributes:
@@ -13,14 +26,21 @@ body:
     id: motivation
     attributes:
       label: Motivation
-      placeholder: Why is this needed? Who benefits?
+      description: "Why is this needed? (Logic-First: State the problem and identify premises/facts)"
+      placeholder: |
+        Problem: ...
+        Premise 1: ...
+        Premise 2: ...
     validations:
       required: true
   - type: textarea
     id: design
     attributes:
       label: Design/Approach
-      placeholder: Architecture, alternatives, rollout plan
+      description: "Architecture, alternatives, rollout plan. (Logic-First: Derive your solution from the premises)"
+      placeholder: |
+        Proposed Solution: ...
+        Reasoning: ...
     validations:
       required: true
   - type: textarea
@@ -34,7 +54,9 @@ body:
     id: risks
     attributes:
       label: Risks and mitigations
+      description: "Consider failure modes and logical inconsistencies."
   - type: textarea
     id: metrics
     attributes:
       label: Success metrics
+      description: "How will we verify the claims?"
