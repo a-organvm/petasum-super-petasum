@@ -1,28 +1,64 @@
 name: RFC (org-wide)
-description: Propose a cross-repo change for review.
+description: Propose a cross-repo change for review using the Logic-First Framework.
 title: "[RFC] <short title>"
 labels: [org-wide, rfc, needs-triage]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Please follow the [Logic-First Framework](https://github.com/ivviiviivvi/petasum-super-petasum/blob/main/LOGIC_FRAMEWORK.md) when proposing changes.
+
   - type: textarea
     id: summary
     attributes:
       label: Summary
+      description: A brief overview of the proposal.
     validations:
       required: true
+
   - type: textarea
-    id: motivation
+    id: problem-statement
     attributes:
-      label: Motivation
-      placeholder: Why is this needed? Who benefits?
+      label: Problem Statement (The Question)
+      description: State the question clearly. What exactly are we trying to decide? (See Logic Framework Step 1)
+      placeholder: "The question we are trying to answer is..."
     validations:
       required: true
+
   - type: textarea
-    id: design
+    id: premises
     attributes:
-      label: Design/Approach
-      placeholder: Architecture, alternatives, rollout plan
+      label: Premises & Facts
+      description: What facts do we know? What assumptions are we making? (See Logic Framework Step 2)
+      placeholder: "- Premise 1: ...\n- Premise 2: ...\n- Fact 1: ..."
     validations:
       required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution (The Conclusion)
+      description: Describe the approach/conclusion. (See Logic Framework Step 3)
+      placeholder: "The proposed solution is..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Logical Reasoning
+      description: Explain how your conclusion follows from your premises. Why is this the valid conclusion? (See Logic Framework Step 4)
+      placeholder: "This solution follows because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other conclusions/options were considered? Why were they rejected logically?
+      placeholder: "Option B was rejected because..."
+
   - type: textarea
     id: impact
     attributes:
@@ -30,11 +66,15 @@ body:
       placeholder: Repos, APIs, contracts
     validations:
       required: true
+
   - type: textarea
     id: risks
     attributes:
       label: Risks and mitigations
+      description: What are the risks of this solution and how will they be mitigated?
+
   - type: textarea
     id: metrics
     attributes:
       label: Success metrics
+      description: How will we verify the success of this proposal?
