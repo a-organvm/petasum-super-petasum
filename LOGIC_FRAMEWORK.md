@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 # Logic Framework: Philosophical and Practical Foundations
 
 ## Table of Contents
@@ -7,6 +9,8 @@
 4. [Practical Applications](#practical-applications)
 5. [Common Misconceptions](#common-misconceptions)
 6. [Advanced Topics](#advanced-topics)
+
+[Back to Top](#top)
 
 ---
 
@@ -44,6 +48,8 @@ Organizations that embrace logical primacy gain:
 3. **Sustainable Growth**: Long-term planning based on logical projections
 4. **Effective Communication**: Shared language of rational discourse
 5. **Continuous Improvement**: Ability to challenge and refine any practice through logic
+
+[Back to Top](#top)
 
 ---
 
@@ -170,6 +176,8 @@ Example:
    - ✗ "This approach is best because it's the optimal solution"
    - ✓ "This approach is best because it minimizes latency and maximizes throughput"
 
+[Back to Top](#top)
+
 ---
 
 ## The Logic-First Philosophy
@@ -240,6 +248,8 @@ In all discussions and decisions:
 - Personal attacks
 - Intentional ambiguity
 - Refusing to engage with logical criticism
+
+[Back to Top](#top)
 
 ---
 
@@ -330,6 +340,8 @@ Measure:
 
 Conclusion: Logical structure improves efficiency (empirically verified)
 ```
+
+[Back to Top](#top)
 
 ---
 
@@ -435,6 +447,8 @@ All perspectives can be:
 
 Logic doesn't privilege one culture, person, or tradition—it's the universal tool for evaluating ANY claim from ANY source.
 
+[Back to Top](#top)
+
 ---
 
 ## Advanced Topics
@@ -513,6 +527,8 @@ Example:
 
 **Response**: Accept fundamental uncertainty while still using logic as our best tool.
 
+[Back to Top](#top)
+
 ---
 
 ## Living Philosophy
@@ -531,9 +547,13 @@ This framework itself is subject to logical scrutiny and refinement.
 
 **The only absolute is the commitment to logic itself.**
 
+[Back to Top](#top)
+
 ---
 
 *Version 1.0 - Logic-First Refactor*
 *Last Updated: 2025-11-18*
 
 **Remember: Logic is not a constraint—it is the very possibility of meaningful thought and discourse.**
+
+[Back to Top](#top)
