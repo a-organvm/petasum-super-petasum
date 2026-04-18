@@ -45,6 +45,8 @@ Organizations that embrace logical primacy gain:
 4. **Effective Communication**: Shared language of rational discourse
 5. **Continuous Improvement**: Ability to challenge and refine any practice through logic
 
+[Back to Top](#)
+
 ---
 
 ## What is Logic?
@@ -144,6 +146,8 @@ Example:
    Therefore, if A, then C
    ```
 
+[Back to Top](#)
+
 ### Common Logical Fallacies to Avoid
 
 1. **Ad Hominem**: Attacking the person instead of the argument
@@ -169,6 +173,8 @@ Example:
 6. **Circular Reasoning**: Using the conclusion as a premise
    - ✗ "This approach is best because it's the optimal solution"
    - ✓ "This approach is best because it minimizes latency and maximizes throughput"
+
+[Back to Top](#)
 
 ---
 
@@ -240,6 +246,8 @@ In all discussions and decisions:
 - Personal attacks
 - Intentional ambiguity
 - Refusing to engage with logical criticism
+
+[Back to Top](#)
 
 ---
 
@@ -331,6 +339,8 @@ Measure:
 Conclusion: Logical structure improves efficiency (empirically verified)
 ```
 
+[Back to Top](#)
+
 ---
 
 ## Common Misconceptions
@@ -421,6 +431,8 @@ Logical creativity:
 → Creativity guided by logic, not replaced by it
 ```
 
+[Back to Top](#)
+
 ### "Logic is just one perspective"
 
 **False.** Logic is the meta-framework for evaluating all perspectives.
@@ -434,6 +446,8 @@ All perspectives can be:
 4. Compared for logical strength
 
 Logic doesn't privilege one culture, person, or tradition—it's the universal tool for evaluating ANY claim from ANY source.
+
+[Back to Top](#)
 
 ---
 
@@ -512,6 +526,8 @@ Example:
 **Implication**: Logical humility is logically required. We cannot have a complete, self-proving system.
 
 **Response**: Accept fundamental uncertainty while still using logic as our best tool.
+
+[Back to Top](#)
 
 ---
 
