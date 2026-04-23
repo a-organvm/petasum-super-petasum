@@ -4,7 +4,8 @@ on:
     types: [opened, labeled]
 jobs:
   add:
-    if: contains(join(fromJson(toJson(github.event.issue.labels)).*.name, ','), 'org-wide')
+    # Optimized: Removed unnecessary JSON serialization/deserialization
+    if: contains(github.event.issue.labels.*.name, 'org-wide')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v1
